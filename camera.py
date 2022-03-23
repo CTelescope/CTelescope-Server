@@ -62,8 +62,3 @@ def Capture() -> None:
     cv2.imwrite(path.join(capture_path,d + '.png'), frame)
 
     cap.release()
-
-if __name__ == '__main__':
-    Rafale(5,5)
-    Enregistrement(5,60)
-    Capture()
