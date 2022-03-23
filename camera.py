@@ -1,60 +1,69 @@
-from time import sleep
-import cv2
 from datetime import datetime
-from os import path
-import os
+from time import sleep
+from os import path, makedirs
+
+import cv2
 
 ABS_DIRECTORY = path.dirname(path.realpath(__file__))
+URI = "http://192.168.1.30:8080/?action=stream"
 
-cap = cv2.VideoCapture('http://192.168.1.30:8080/?action=stream')
 
-def Rafale(Duree = 5, FPS = 24):
-    count = 0
+def Rafale(Duree, FPS) -> None:
+    cap = cv2.VideoCapture(URI)
     d = datetime.now().strftime('%Y-%m-%d-%H-%M-%S')
-    ABSOLUTE_FRAME_PATH = path.join(ABS_DIRECTORY, "Rafales/" + d)
+    frame_path = path.join(ABS_DIRECTORY, "Rafales/" + d)
     
-    if not os.path.exists(ABSOLUTE_FRAME_PATH):
-        os.makedirs(ABSOLUTE_FRAME_PATH)
+    if not path.exists(frame_path):
+        makedirs(frame_path)
 
-    for t in range(0,Duree):
-        print("sec : ", str(t+1))
-        for i in range(0,FPS):
+    for s in range(0,Duree):
+        for c in range(0,FPS):
             frame = cap.read()[1]
-            cv2.imwrite(path.join(ABSOLUTE_FRAME_PATH, f"{t}-{i}.png"), frame)
-            sleep(1/FPS)    
+            cv2.imwrite(path.join(frame_path, f"{s}-{c}.png"), frame)
+            sleep(1/FPS)
+
     cap.release()
 
-        
+def Enregistrement(Duree, FPS) -> None:
+    cap = cv2.VideoCapture(URI)
 
-def Enregistrement(duree_record, fps_record):
-    count = 0
     d = datetime.now().strftime('%Y-%m-%d-%H-%M-%S')
-    ABSOLUTE_RECORD_PATH = path.join(ABS_DIRECTORY, "/Enregistrements/")
+    record_path = path.join(ABS_DIRECTORY, "Enregistrements/")
 
-    if not os.path.exists(ABSOLUTE_RECORD_PATH):
-        os.makedirs(ABSOLUTE_RECORD_PATH)
-
-    for t in range(0,duree_record):
-        print("sec : ", str(t+1))
-        tab = []        
-        for i in range(0,fps_record):
+    if not path.exists(record_path):
+        makedirs(record_path)
+    
+    frames = []        
+    for _ in range(0,Duree):
+        for __ in range(0,FPS):
             frame = cap.read()[1]
-            tab.append(frame)
-            sleep(1/fps_record) 
+            frames.append(frame)
+            sleep(1/FPS) 
     cap.release()
 
     height, width, layers = frame.shape
-    size = (width,height)
-
-    out = cv2.VideoWriter(path.join(ABSOLUTE_RECORD_PATH, d + '.avi'),cv2.VideoWriter_fourcc(*'DIVX'), fps_record, size)
-    
-    for i in range(len(tab)):
-        out.write(tab[i])
+    out = cv2.VideoWriter(path.join(record_path, d + '.avi'), 
+                          cv2.VideoWriter_fourcc(*'DIVX'), 
+                          FPS, (width,height))
+    for f in range(len(frames)):
+        out.write(frames[f])
     out.release()
 
-# def Capture():
-#     ret, frame = cap.read()
-#     cv2.imwrite(f + '.png', frame)
+def Capture() -> None:
+    cap = cv2.VideoCapture(URI)
+
+    d = datetime.now().strftime('%Y-%m-%d-%H-%M-%S')
+    capture_path = path.join(ABS_DIRECTORY, "Captures/")
+
+    if not path.exists(capture_path):
+        makedirs(capture_path)
+
+    frame = cap.read()[1]
+    cv2.imwrite(path.join(capture_path,d + '.png'), frame)
+
+    cap.release()
 
 if __name__ == '__main__':
-    Enregistrement(5,24)
+    Rafale(5,5)
+    Enregistrement(5,60)
+    Capture()
