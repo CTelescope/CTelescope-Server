@@ -2,9 +2,13 @@ from pprint import pprint
 
 from camera import Rafale, Enregistrement, Capture
 from motor_control import Goto
-from BDD import *
+from BDD import get_objects,get_object_by_id,update_object,delete_object,get_constellations,get_const_by_id,get_types,get_type_by_id,insert_object
+
 from flask import Flask, request, jsonify
 from flask_cors import CORS, cross_origin
+
+
+
 
 
 """ SETUP FLASK"""
@@ -105,6 +109,7 @@ def api_update_object():
 """
     Permet ...
 """
+
 @app.route('/api/objet/delete/<Id_obj>', methods = ['DELETE'])
 def api_delete_object(Id_obj):
     return jsonify(delete_object(Id_obj))
@@ -121,6 +126,8 @@ def api_get_const(Id_const):
 """
     Permet ...
 """
+
+
 #Type
 @app.route('/api/types', methods = ['GET'])
 def api_get_types():
@@ -129,9 +136,15 @@ def api_get_types():
 """
     Permet ...
 """
+
 @app.route('/api/type/<Id_type>', methods = ['GET'])
 def api_get_type(Id_type):
     return jsonify(get_type_by_id(Id_type))
 
+
+
+
+
+    
 if __name__ == '__main__':
 	app.run(host='0.0.0.0', port=5000)
