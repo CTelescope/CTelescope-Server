@@ -29,8 +29,7 @@ def GetPositionAPI():
     return jsonify({"current_position": '??'})
 
 #--------------------------------------------------------
-# Permettre de recuperer la position actuellement pointée 
-#  par le télescope.
+# Permet de deplacer le telescope vers une position donnée
 @app.route("/api/goto",methods=['POST'])
 @cross_origin(supports_credentials=True)
 def api_goto():
