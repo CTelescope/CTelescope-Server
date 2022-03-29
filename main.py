@@ -1,4 +1,4 @@
-#!/usr/bin/env python
+#!/usr/bin/env python3
 # -*- coding: utf-8 -*-
 from pprint import pprint
 
@@ -6,7 +6,7 @@ from flask import Flask, request, jsonify
 from flask_cors import CORS, cross_origin
 
 from camera import Rafale, Enregistrement, Capture
-from motor_control import Goto
+from motor_control import doStep
 from BDD import get_objects,get_object_by_id,update_object,delete_object,get_constellations,get_const_by_id,get_types,get_type_by_id,insert_object
 
 """ 
@@ -35,7 +35,7 @@ def GetPositionAPI():
 def api_goto():
     if request.is_json:
         payload = request.get_json()
-        Goto(payload["mode"], payload["nb_steps"])
+        doStep(payload["mode"], payload["nb_steps"])
         return {'new position':f'???'}, 200
     return {"error": "Request must be JSON"}, 415
 

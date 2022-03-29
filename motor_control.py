@@ -1,20 +1,29 @@
 from time import sleep
+import RPi.GPIO as gpio
 
-from raspberry_i2c_tb6612fng import MotorDriverTB6612FNG, TB6612FNGStepper
+DIR = 20
+STEP = 21
 
-# Le paramètre est le nombre de tours par minute, la vitesse d'un stepper, 
-#  allant de 1 à 300. Notez qu'un régime élevé conduira à un pas lâche, 
-#  donc le régime ne doit pas être supérieur à 150
-rpm = 90
+CW = 1
+CCW = 0
 
-driver = MotorDriverTB6612FNG(0x0f)
+gpio.setmode(gpio.BCM)
+gpio.setup(DIR, gpio.OUT)
+gpio.setup(STEP, gpio.OUT)
 
-def Goto(mode: int, nb_step: int):
-    # NOTE 48 seulement pour les anciens moteurs P542-M481U-G17L82
-    driver.stepper_run(mode, nb_step*24, rpm)
-    sleep(10)
-    driver.stepper_stop()
+# 1 Pas = 0.009375°
+SPR = 2400*16
 
-
-if __name__ == '__main__':
-    Goto(TB6612FNGStepper.FULL_STEP, -10)
+def doStep(nb_step: int):
+    # Sens
+    if nb_step < 0: 
+        gpio.output(DIR,CW)
+    else:
+        gpio.output(DIR,CCW)
+    
+    # On effectue le nombre de pas
+    for _ in range(abs(nb_step)):
+        gpio.output(STEP,gpio.HIGH)
+        sleep(.0001)
+        gpio.output(STEP,gpio.LOW)
+        sleep(.0001)
