@@ -1,8 +1,10 @@
 from datetime import datetime
-from time import sleep
+from time import sleep, perf_counter
 from os import path, makedirs
-import threading
+from threading import Thread
+from xml.etree.ElementPath import prepare_descendant
 
+import numpy as np
 import cv2
 
 ABS_DIRECTORY = path.dirname(path.realpath(__file__))
@@ -20,9 +22,13 @@ def Rafale(Duree, FPS) -> None:
 
     for s in range(0,Duree):
         for c in range(0,FPS):
+            timer = perf_counter()
+            
             frame = cap.read()[1]
             cv2.imwrite(path.join(frame_path, f"{s}-{c}.png"), frame)
-            sleep(1/FPS)
+
+            end_time = (1/FPS) - (perf_counter() - timer)
+            if end_time > 0 : sleep(end_time)
 
     cap.release()
 
@@ -37,10 +43,14 @@ def Enregistrement(Duree, FPS) -> None:
     
     frames = []        
     for _ in range(0,Duree):
-        for __ in range(0,FPS):
+        for _ in range(0,FPS):
+            timer = perf_counter()
+            
             frame = cap.read()[1]
             frames.append(frame)
-            sleep(1/FPS) 
+
+            end_time = (1/FPS) - (perf_counter() - timer)
+            if end_time > 0 : sleep(end_time)
     cap.release()
 
     height, width, layers = frame.shape
@@ -70,7 +80,7 @@ def StartRecord(FPS) -> None:
 
     if RECORD_STATUT is False:
         RECORD_STATUT = True
-        x = threading.Thread(target=_Record, args=(FPS,))
+        x = Thread(target=_Record, args=(FPS,))
         x.start()
 
 def StopRecord() -> None:
@@ -81,7 +91,7 @@ def StopRecord() -> None:
 
 def _Record(FPS) -> None:
     global RECORD_STATUT
-    
+
     cap = cv2.VideoCapture(URI)
 
     d = datetime.now().strftime('%Y-%m-%d-%H-%M-%S')
@@ -90,25 +100,35 @@ def _Record(FPS) -> None:
     if not path.exists(record_path):
         makedirs(record_path)
 
+    print('[*] Capture des images')
+
     frames = []
-    RECORD_STATUT = True
+
     while RECORD_STATUT:
         for _ in range(0,FPS):
+            timer = perf_counter()
+            
             frame = cap.read()[1]
             frames.append(frame)
-            sleep(1/FPS) 
 
+            end_time = (1/FPS) - (perf_counter() - timer)
+            if end_time > 0 : sleep(end_time)
     cap.release()
+
+    print('[*] Ecriture de la video')
 
     height, width, layers = frame.shape
     out = cv2.VideoWriter(path.join(record_path, d + '.avi'), 
                           cv2.VideoWriter_fourcc(*'DIVX'), 
                           FPS, (width,height))
+
     for f in range(len(frames)):
         out.write(frames[f])
+        print(f"write : {f}", end='\r')
     out.release()
 
 if __name__ == '__main__':
     StartRecord(24)
-    sleep(1)
+    sleep(15)
     StopRecord()
+    print('\n')
