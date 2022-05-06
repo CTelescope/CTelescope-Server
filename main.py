@@ -3,12 +3,13 @@
 from pprint import pprint
 from types import TracebackType
 
-from flask import Flask, request, jsonify
+from flask import Flask, request, jsonify, send_file
 from flask_cors import CORS, cross_origin
 
 from camera import Rafale, Enregistrement, Capture, StartRecord, StopRecord
 from motor_control import doSteps
 from BDD import get_objects,get_object_by_id,update_object,delete_object,get_constellations,get_const_by_id,get_types,get_type_by_id,insert_object
+
 
 
 """ 
@@ -103,6 +104,19 @@ def api_capture():
         Capture()
         return {'result':f'success'}, 200
     return {"error": "Request must be JSON"}, 415
+
+
+"""
+    Interfaces pour la gallerie
+"""
+@app.route('/get_image')
+def get_image():
+    filename = 'test.jpg'
+    return send_file(filename, mimetype='image/jpg')
+
+# TOTO : Get tree
+
+
 
 
 """

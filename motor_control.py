@@ -1,32 +1,62 @@
 from time import sleep
 import RPi.GPIO as gpio
+import asyncio
 
-PIN_DIR = 20
-PIN_STEP = 21
+# Constantes
+MOTEUR_DEC_PIN_DIR = 20
+MOTEUR_DEC_PIN_STEP = 21
+
+MOTEUR_AD_PIN_DIR = 23
+MOTEUR_AD_PIN_STEP = 24
 
 CW = 1
 CCW = 0
 
-gpio.setmode(gpio.BCM)
-gpio.setup(PIN_DIR, gpio.OUT)
-gpio.setup(PIN_STEP, gpio.OUT)
+T = .0001
 
 # 1 Pas = 0.009375°
 SPR = 2400*16
 
-def doSteps(nb_steps: int):
-    # Sens
+DEBUG = True
+
+# Setup Pin 
+gpio.setmode(gpio.BCM)
+gpio.setup(MOTEUR_DEC_PIN_DIR, gpio.OUT)
+gpio.setup(MOTEUR_DEC_PIN_STEP, gpio.OUT)
+gpio.setup(MOTEUR_AD_PIN_DIR, gpio.OUT)
+gpio.setup(MOTEUR_AD_PIN_STEP, gpio.OUT)
+
+async def makeAStep(step_pin: int):
+    gpio.output(step_pin,gpio.HIGH)
+    sleep(100*10**-8) # 100*10**-8 -> Voir doc du sheep TMC2209
+    gpio.output(step_pin,gpio.LOW)
+    sleep(100*10**-8)
+
+
+async def doSteps(nb_steps: int, step_pin: int, dir_pin: int):
+    if DEBUG:
+        print("Nombre de pas : ", nb_steps )
+        print("Frequence     : ", 1/T, "Hz")
+
+    # Définition du sens de rotation
     if nb_steps < 0: 
-        gpio.output(PIN_DIR,CW)
+        gpio.output(dir_pin,CCW)
     else:
-        gpio.output(PIN_DIR,CCW)
-    
+        gpio.output(dir_pin,CW)
+
+    print("...")
     # On effectue le nombre de pas
     for _ in range(abs(nb_steps)):
-        gpio.output(PIN_STEP,gpio.HIGH)
-        sleep(.0001)
-        gpio.output(PIN_STEP,gpio.LOW)
-        sleep(.0001)
+        await makeAStep(step_pin)
+        sleep(T)
+        #fais un tour complet en 15 secondes avec sleep(.0001) et environ 1 minutes 24 avec sleep(.001)
+
+async def main():
+    await asyncio.gather(
+        asyncio.create_task(doSteps(2400*16, MOTEUR_DEC_PIN_STEP, MOTEUR_DEC_PIN_DIR)),
+        asyncio.create_task(doSteps(-2400*16, MOTEUR_AD_PIN_DIR, MOTEUR_AD_PIN_STEP))
+    )
+
 
 if __name__ == "__main__":
-    doSteps(2400*16)
+    asyncio.run(main())
