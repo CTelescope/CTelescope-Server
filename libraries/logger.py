@@ -5,7 +5,7 @@ from logging import DEBUG, INFO, WARNING, ERROR, CRITICAL
 from sys import stdout
 
 LOGFILE = 'log.txt'
-""" ANSI Excape Code for text style"""
+""" ANSI escape code to stylize text """
 _RESET      = '\33[0m'
 _BOLD       = '\33[1m'
 _RED        = '\33[38;2;241;70;55m'
@@ -18,7 +18,7 @@ _GRAY       = '\33[38;2;204;204;204m'
 STAT_INFO = 11
 SUCC_INFO = 12
 FAIL_INFO = 13
-""" Log Formats"""
+""" Log Formats """
 _FMT = "{message}"
 _FORMATS = {
             DEBUG       : f'[{_BOLD+_GRAY}DEBUG{_RESET}] {_FMT}', 

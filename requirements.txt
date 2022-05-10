@@ -4,3 +4,4 @@ flask_cors
 opencv-python
 #pip install -U numpy
 numpy
+astropy[recommended]

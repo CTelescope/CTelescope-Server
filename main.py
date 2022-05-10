@@ -13,8 +13,7 @@ logger = setup_logger(__file__, DEBUG)
 """ FLASK SETUP """
 app = Flask(__name__)
 app.config['CORS_HEADERS'] = 'application/json'
-cors = CORS(app, supports_credentials=True)
-
+CORS(app, supports_credentials=True)
 init_routes(app)
 
 # Entry point
@@ -25,5 +24,7 @@ if __name__ == '__main__':
 	except Exception as e:
 		logger.error(e)
 
-	logger.info("Clean up GPIOs")
-	cleanup()
+	finally:
+		logger.info("Clean up GPIOs")
+		cleanup()
+		logger.info("End of program")	

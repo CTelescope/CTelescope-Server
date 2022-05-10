@@ -1,6 +1,1193 @@
-2022-05-09 14:08:01 INFO      * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
-2022-05-09 14:16:52 INFO      * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
-2022-05-09 14:16:54 SUCCESS  Server started.
-2022-05-09 14:16:54 INFO     Cleanup GPIOs
-2022-05-09 14:17:07 INFO      * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
-2022-05-09 14:17:09 INFO     Cleanup GPIOs
+2022-05-09 23:30:06 INFO      * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2022-05-09 23:30:14 INFO     Clean up GPIOs
+2022-05-09 23:30:14 INFO     End of program
+2022-05-10 14:21:10 INFO      * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2022-05-10 14:29:48 INFO     192.168.1.141 - - [10/May/2022 14:29:48] "[37mGET /api/objets HTTP/1.1[0m" 200 -
+2022-05-10 14:29:48 INFO     192.168.1.141 - - [10/May/2022 14:29:48] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-10 14:30:24 INFO     Clean up GPIOs
+2022-05-10 14:30:24 INFO     End of program
+2022-05-10 14:30:26 INFO      * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2022-05-10 14:30:29 INFO     192.168.1.141 - - [10/May/2022 14:30:29] "[37mGET /api/objets HTTP/1.1[0m" 200 -
+2022-05-10 14:31:54 INFO     192.168.1.87 - - [10/May/2022 14:31:54] "[33mGET /api/catalogues HTTP/1.1[0m" 404 -
+2022-05-10 14:31:59 INFO     192.168.1.87 - - [10/May/2022 14:31:59] "[33mGET /api/catalogues HTTP/1.1[0m" 404 -
+2022-05-10 14:32:52 INFO     Clean up GPIOs
+2022-05-10 14:32:52 INFO     End of program
+2022-05-10 14:33:37 INFO      * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2022-05-10 14:33:41 INFO     192.168.1.141 - - [10/May/2022 14:33:41] "[33mGET /api/objet_cata/ HTTP/1.1[0m" 404 -
+2022-05-10 14:33:51 INFO     192.168.1.87 - - [10/May/2022 14:33:51] "[37mGET /api/catalogues HTTP/1.1[0m" 200 -
+2022-05-10 14:33:54 INFO     192.168.1.141 - - [10/May/2022 14:33:54] "[37mGET /api/objets HTTP/1.1[0m" 200 -
+2022-05-10 14:34:39 INFO     192.168.1.87 - - [10/May/2022 14:34:39] "[37mGET /api/objet_cata/undefined HTTP/1.1[0m" 200 -
+2022-05-10 14:34:59 INFO     192.168.1.87 - - [10/May/2022 14:34:59] "[37mGET /api/objet_cata/undefined HTTP/1.1[0m" 200 -
+2022-05-10 14:35:07 INFO     192.168.1.87 - - [10/May/2022 14:35:07] "[37mGET /api/catalogues HTTP/1.1[0m" 200 -
+2022-05-10 14:35:08 INFO     192.168.1.87 - - [10/May/2022 14:35:08] "[37mGET /api/objet_cata/1 HTTP/1.1[0m" 200 -
+2022-05-10 14:36:25 INFO     192.168.1.87 - - [10/May/2022 14:36:25] "[37mGET /api/catalogues HTTP/1.1[0m" 200 -
+2022-05-10 14:36:30 INFO     192.168.1.87 - - [10/May/2022 14:36:30] "[37mGET /api/objet_cata/1 HTTP/1.1[0m" 200 -
+2022-05-10 14:43:44 INFO     192.168.1.129 - - [10/May/2022 14:43:44] "[37mGET /api/catalogues HTTP/1.1[0m" 200 -
+2022-05-10 14:46:15 INFO     192.168.1.129 - - [10/May/2022 14:46:15] "[37mGET /api/objet_cata/undefined HTTP/1.1[0m" 200 -
+2022-05-10 14:46:17 INFO     192.168.1.129 - - [10/May/2022 14:46:17] "[37mGET /api/objet_cata/undefined HTTP/1.1[0m" 200 -
+2022-05-10 14:46:58 INFO     192.168.1.129 - - [10/May/2022 14:46:58] "[37mGET /api/catalogues HTTP/1.1[0m" 200 -
+2022-05-10 14:47:09 INFO     192.168.1.129 - - [10/May/2022 14:47:09] "[37mGET /api/catalogues HTTP/1.1[0m" 200 -
+2022-05-10 14:47:18 INFO     192.168.1.129 - - [10/May/2022 14:47:18] "[37mGET /api/catalogues HTTP/1.1[0m" 200 -
+2022-05-10 14:48:03 INFO     192.168.1.129 - - [10/May/2022 14:48:03] "[37mGET /api/catalogues HTTP/1.1[0m" 200 -
+2022-05-10 14:48:05 INFO     192.168.1.129 - - [10/May/2022 14:48:05] "[37mGET /api/objet_cata/1 HTTP/1.1[0m" 200 -
+2022-05-10 14:48:37 INFO     192.168.1.129 - - [10/May/2022 14:48:37] "[37mGET /api/catalogues HTTP/1.1[0m" 200 -
+2022-05-10 14:49:39 INFO     192.168.1.129 - - [10/May/2022 14:49:39] "[37mGET /api/catalogues HTTP/1.1[0m" 200 -
+2022-05-10 14:49:46 INFO     192.168.1.129 - - [10/May/2022 14:49:46] "[37mGET /api/catalogues HTTP/1.1[0m" 200 -
+2022-05-10 14:49:54 INFO     192.168.1.129 - - [10/May/2022 14:49:54] "[37mGET /api/objet_cata/1 HTTP/1.1[0m" 200 -
+2022-05-10 14:50:50 INFO     192.168.1.129 - - [10/May/2022 14:50:50] "[37mGET /api/objet_cata/undefined HTTP/1.1[0m" 200 -
+2022-05-10 14:50:57 INFO     192.168.1.129 - - [10/May/2022 14:50:57] "[37mGET /api/objet_cata/undefined HTTP/1.1[0m" 200 -
+2022-05-10 14:51:03 INFO     192.168.1.129 - - [10/May/2022 14:51:03] "[37mGET /api/objet_cata/undefined HTTP/1.1[0m" 200 -
+2022-05-10 14:51:06 INFO     192.168.1.129 - - [10/May/2022 14:51:06] "[37mGET /api/objet_cata/undefined HTTP/1.1[0m" 200 -
+2022-05-10 14:51:06 INFO     192.168.1.129 - - [10/May/2022 14:51:06] "[37mGET /api/objet_cata/undefined HTTP/1.1[0m" 200 -
+2022-05-10 14:51:07 INFO     192.168.1.129 - - [10/May/2022 14:51:07] "[37mGET /api/objet_cata/undefined HTTP/1.1[0m" 200 -
+2022-05-10 14:51:07 INFO     192.168.1.129 - - [10/May/2022 14:51:07] "[37mGET /api/objet_cata/undefined HTTP/1.1[0m" 200 -
+2022-05-10 14:51:09 INFO     192.168.1.129 - - [10/May/2022 14:51:09] "[37mGET /api/catalogues HTTP/1.1[0m" 200 -
+2022-05-10 14:51:12 INFO     192.168.1.129 - - [10/May/2022 14:51:12] "[37mGET /api/objet_cata/undefined HTTP/1.1[0m" 200 -
+2022-05-10 14:51:12 INFO     192.168.1.129 - - [10/May/2022 14:51:12] "[37mGET /api/objet_cata/undefined HTTP/1.1[0m" 200 -
+2022-05-10 14:51:12 INFO     192.168.1.129 - - [10/May/2022 14:51:12] "[37mGET /api/objet_cata/undefined HTTP/1.1[0m" 200 -
+2022-05-10 14:51:12 INFO     192.168.1.129 - - [10/May/2022 14:51:12] "[37mGET /api/objet_cata/undefined HTTP/1.1[0m" 200 -
+2022-05-10 14:51:12 INFO     192.168.1.129 - - [10/May/2022 14:51:12] "[37mGET /api/objet_cata/undefined HTTP/1.1[0m" 200 -
+2022-05-10 14:51:13 INFO     192.168.1.129 - - [10/May/2022 14:51:13] "[37mGET /api/objet_cata/undefined HTTP/1.1[0m" 200 -
+2022-05-10 14:51:13 INFO     192.168.1.129 - - [10/May/2022 14:51:13] "[37mGET /api/objet_cata/undefined HTTP/1.1[0m" 200 -
+2022-05-10 14:51:14 INFO     192.168.1.129 - - [10/May/2022 14:51:14] "[37mGET /api/objet_cata/undefined HTTP/1.1[0m" 200 -
+2022-05-10 14:51:16 INFO     192.168.1.129 - - [10/May/2022 14:51:16] "[37mGET /api/objet_cata/undefined HTTP/1.1[0m" 200 -
+2022-05-10 14:51:29 INFO     192.168.1.129 - - [10/May/2022 14:51:29] "[37mGET /api/catalogues HTTP/1.1[0m" 200 -
+2022-05-10 14:51:30 INFO     192.168.1.129 - - [10/May/2022 14:51:30] "[37mGET /api/objet_cata/1 HTTP/1.1[0m" 200 -
+2022-05-10 14:53:10 INFO     192.168.1.87 - - [10/May/2022 14:53:10] "[37mGET /api/objet_cata/undefined HTTP/1.1[0m" 200 -
+2022-05-10 14:56:08 INFO     192.168.1.129 - - [10/May/2022 14:56:08] "[37mGET /api/objet_cata/undefined HTTP/1.1[0m" 200 -
+2022-05-10 14:56:36 INFO     192.168.1.129 - - [10/May/2022 14:56:36] "[37mGET /api/objet_cata/undefined HTTP/1.1[0m" 200 -
+2022-05-10 14:56:38 INFO     192.168.1.129 - - [10/May/2022 14:56:38] "[37mGET /api/objet_cata/undefined HTTP/1.1[0m" 200 -
+2022-05-10 14:56:41 INFO     192.168.1.129 - - [10/May/2022 14:56:41] "[37mGET /api/catalogues HTTP/1.1[0m" 200 -
+2022-05-10 14:56:44 INFO     192.168.1.129 - - [10/May/2022 14:56:44] "[37mGET /api/objet_cata/undefined HTTP/1.1[0m" 200 -
+2022-05-10 14:56:48 INFO     192.168.1.129 - - [10/May/2022 14:56:48] "[37mGET /api/catalogues HTTP/1.1[0m" 200 -
+2022-05-10 14:56:49 INFO     192.168.1.129 - - [10/May/2022 14:56:49] "[37mGET /api/objet_cata/2 HTTP/1.1[0m" 200 -
+2022-05-10 15:17:42 INFO     192.168.1.129 - - [10/May/2022 15:17:42] "[37mGET /api/objet_cata/undefined HTTP/1.1[0m" 200 -
+2022-05-10 15:17:45 INFO     192.168.1.129 - - [10/May/2022 15:17:45] "[37mGET /api/objet_cata/undefined HTTP/1.1[0m" 200 -
+2022-05-10 15:17:48 INFO     192.168.1.129 - - [10/May/2022 15:17:48] "[37mGET /api/catalogues HTTP/1.1[0m" 200 -
+2022-05-10 15:17:56 INFO     192.168.1.129 - - [10/May/2022 15:17:56] "[37mGET /api/objet_cata/undefined HTTP/1.1[0m" 200 -
+2022-05-10 15:18:00 INFO     192.168.1.129 - - [10/May/2022 15:18:00] "[37mGET /api/catalogues HTTP/1.1[0m" 200 -
+2022-05-10 15:18:01 INFO     192.168.1.129 - - [10/May/2022 15:18:01] "[37mGET /api/objet_cata/1 HTTP/1.1[0m" 200 -
+2022-05-10 15:18:03 INFO     192.168.1.129 - - [10/May/2022 15:18:03] "[37mGET /api/objet_cata/undefined HTTP/1.1[0m" 200 -
+2022-05-10 15:18:07 INFO     192.168.1.129 - - [10/May/2022 15:18:07] "[37mGET /api/catalogues HTTP/1.1[0m" 200 -
+2022-05-10 15:18:16 INFO     192.168.1.129 - - [10/May/2022 15:18:16] "[37mGET /api/objet_cata/1 HTTP/1.1[0m" 200 -
+2022-05-10 15:18:32 INFO     192.168.1.129 - - [10/May/2022 15:18:32] "[37mOPTIONS /api/rafales HTTP/1.1[0m" 200 -
+2022-05-10 15:18:38 INFO     192.168.1.129 - - [10/May/2022 15:18:38] "[37mPOST /api/rafales HTTP/1.1[0m" 200 -
+2022-05-10 15:30:23 INFO     Clean up GPIOs
+2022-05-10 15:30:23 INFO     End of program
+2022-05-10 15:37:39 INFO      * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2022-05-10 15:40:06 INFO     192.168.1.141 - - [10/May/2022 15:40:06] "[31m[1mPOST /api/goto HTTP/1.1[0m" 400 -
+2022-05-10 15:41:00 INFO     192.168.1.141 - - [10/May/2022 15:41:00] "[31m[1mPOST /api/goto HTTP/1.1[0m" 400 -
+2022-05-10 15:41:24 INFO     Clean up GPIOs
+2022-05-10 15:41:24 INFO     End of program
+2022-05-10 15:41:27 INFO      * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2022-05-10 15:41:32 INFO     192.168.1.141 - - [10/May/2022 15:41:32] "[31m[1mPOST /api/goto HTTP/1.1[0m" 400 -
+2022-05-10 15:43:35 INFO     192.168.1.141 - - [10/May/2022 15:43:35] "[31m[1mPOST /api/goto HTTP/1.1[0m" 400 -
+2022-05-10 15:43:51 INFO     192.168.1.141 - - [10/May/2022 15:43:51] "[33mPOST /api/getposition HTTP/1.1[0m" 404 -
+2022-05-10 15:43:59 ERROR    Exception on /api/position [GET]
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/pi/.local/lib/python3.9/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python3/dist-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/pi/dev/CTelescope-Server/routes/telescope_control.py", line 19, in GetPositionAPI
+    return jsonify({"current_position": current_position})
+  File "/usr/lib/python3/dist-packages/flask/json/__init__.py", line 370, in jsonify
+    dumps(data, indent=indent, separators=separators) + "\n",
+  File "/usr/lib/python3/dist-packages/flask/json/__init__.py", line 211, in dumps
+    rv = _json.dumps(obj, **kwargs)
+  File "/usr/lib/python3/dist-packages/simplejson/__init__.py", line 398, in dumps
+    return cls(
+  File "/usr/lib/python3/dist-packages/simplejson/encoder.py", line 296, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3/dist-packages/simplejson/encoder.py", line 378, in iterencode
+    return _iterencode(o, 0)
+  File "/usr/lib/python3/dist-packages/flask/json/__init__.py", line 100, in default
+    return _json.JSONEncoder.default(self, o)
+  File "/usr/lib/python3/dist-packages/simplejson/encoder.py", line 272, in default
+    raise TypeError('Object of type %s is not JSON serializable' %
+TypeError: Object of type SkyCoord is not JSON serializable
+2022-05-10 15:43:59 INFO     192.168.1.141 - - [10/May/2022 15:43:59] "[35m[1mGET /api/position HTTP/1.1[0m" 500 -
+2022-05-10 15:49:38 ERROR    Exception on /api/position [GET]
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/pi/.local/lib/python3.9/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python3/dist-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/pi/dev/CTelescope-Server/routes/telescope_control.py", line 19, in GetPositionAPI
+    return jsonify({"current_position": current_position})
+  File "/usr/lib/python3/dist-packages/flask/json/__init__.py", line 370, in jsonify
+    dumps(data, indent=indent, separators=separators) + "\n",
+  File "/usr/lib/python3/dist-packages/flask/json/__init__.py", line 211, in dumps
+    rv = _json.dumps(obj, **kwargs)
+  File "/usr/lib/python3/dist-packages/simplejson/__init__.py", line 398, in dumps
+    return cls(
+  File "/usr/lib/python3/dist-packages/simplejson/encoder.py", line 296, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3/dist-packages/simplejson/encoder.py", line 378, in iterencode
+    return _iterencode(o, 0)
+  File "/usr/lib/python3/dist-packages/flask/json/__init__.py", line 100, in default
+    return _json.JSONEncoder.default(self, o)
+  File "/usr/lib/python3/dist-packages/simplejson/encoder.py", line 272, in default
+    raise TypeError('Object of type %s is not JSON serializable' %
+TypeError: Object of type SkyCoord is not JSON serializable
+2022-05-10 15:49:38 INFO     192.168.1.141 - - [10/May/2022 15:49:38] "[35m[1mGET /api/position HTTP/1.1[0m" 500 -
+2022-05-10 15:49:47 INFO     Clean up GPIOs
+2022-05-10 15:49:47 INFO     End of program
+2022-05-10 15:49:51 INFO      * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2022-05-10 15:50:05 ERROR    Exception on /api/position [GET]
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/pi/.local/lib/python3.9/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python3/dist-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/pi/dev/CTelescope-Server/routes/telescope_control.py", line 19, in GetPositionAPI
+    return jsonify({"current_position": current_position})
+  File "/usr/lib/python3/dist-packages/flask/json/__init__.py", line 370, in jsonify
+    dumps(data, indent=indent, separators=separators) + "\n",
+  File "/usr/lib/python3/dist-packages/flask/json/__init__.py", line 211, in dumps
+    rv = _json.dumps(obj, **kwargs)
+  File "/usr/lib/python3/dist-packages/simplejson/__init__.py", line 398, in dumps
+    return cls(
+  File "/usr/lib/python3/dist-packages/simplejson/encoder.py", line 296, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3/dist-packages/simplejson/encoder.py", line 378, in iterencode
+    return _iterencode(o, 0)
+  File "/usr/lib/python3/dist-packages/flask/json/__init__.py", line 100, in default
+    return _json.JSONEncoder.default(self, o)
+  File "/usr/lib/python3/dist-packages/simplejson/encoder.py", line 272, in default
+    raise TypeError('Object of type %s is not JSON serializable' %
+TypeError: Object of type SkyCoord is not JSON serializable
+2022-05-10 15:50:05 INFO     192.168.1.141 - - [10/May/2022 15:50:05] "[35m[1mGET /api/position HTTP/1.1[0m" 500 -
+2022-05-10 15:50:34 ERROR    Exception on /api/position [GET]
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/pi/.local/lib/python3.9/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python3/dist-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/pi/dev/CTelescope-Server/routes/telescope_control.py", line 19, in GetPositionAPI
+    return jsonify({"current_position": get_position})
+  File "/usr/lib/python3/dist-packages/flask/json/__init__.py", line 370, in jsonify
+    dumps(data, indent=indent, separators=separators) + "\n",
+  File "/usr/lib/python3/dist-packages/flask/json/__init__.py", line 211, in dumps
+    rv = _json.dumps(obj, **kwargs)
+  File "/usr/lib/python3/dist-packages/simplejson/__init__.py", line 398, in dumps
+    return cls(
+  File "/usr/lib/python3/dist-packages/simplejson/encoder.py", line 296, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3/dist-packages/simplejson/encoder.py", line 378, in iterencode
+    return _iterencode(o, 0)
+  File "/usr/lib/python3/dist-packages/flask/json/__init__.py", line 100, in default
+    return _json.JSONEncoder.default(self, o)
+  File "/usr/lib/python3/dist-packages/simplejson/encoder.py", line 272, in default
+    raise TypeError('Object of type %s is not JSON serializable' %
+TypeError: Object of type SkyCoord is not JSON serializable
+2022-05-10 15:50:34 INFO     192.168.1.141 - - [10/May/2022 15:50:34] "[35m[1mGET /api/position HTTP/1.1[0m" 500 -
+2022-05-10 15:50:50 INFO     Clean up GPIOs
+2022-05-10 15:50:50 INFO     End of program
+2022-05-10 15:50:55 INFO      * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2022-05-10 15:50:58 ERROR    Exception on /api/position [GET]
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/pi/.local/lib/python3.9/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python3/dist-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/pi/dev/CTelescope-Server/routes/telescope_control.py", line 19, in GetPositionAPI
+    return jsonify({"current_position": get_position})
+  File "/usr/lib/python3/dist-packages/flask/json/__init__.py", line 370, in jsonify
+    dumps(data, indent=indent, separators=separators) + "\n",
+  File "/usr/lib/python3/dist-packages/flask/json/__init__.py", line 211, in dumps
+    rv = _json.dumps(obj, **kwargs)
+  File "/usr/lib/python3/dist-packages/simplejson/__init__.py", line 398, in dumps
+    return cls(
+  File "/usr/lib/python3/dist-packages/simplejson/encoder.py", line 296, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3/dist-packages/simplejson/encoder.py", line 378, in iterencode
+    return _iterencode(o, 0)
+  File "/usr/lib/python3/dist-packages/flask/json/__init__.py", line 100, in default
+    return _json.JSONEncoder.default(self, o)
+  File "/usr/lib/python3/dist-packages/simplejson/encoder.py", line 272, in default
+    raise TypeError('Object of type %s is not JSON serializable' %
+TypeError: Object of type function is not JSON serializable
+2022-05-10 15:50:58 INFO     192.168.1.141 - - [10/May/2022 15:50:58] "[35m[1mGET /api/position HTTP/1.1[0m" 500 -
+2022-05-10 15:51:12 INFO     Clean up GPIOs
+2022-05-10 15:51:12 INFO     End of program
+2022-05-10 15:51:33 INFO      * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2022-05-10 15:51:36 ERROR    Exception on /api/position [GET]
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/pi/.local/lib/python3.9/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python3/dist-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/pi/dev/CTelescope-Server/routes/telescope_control.py", line 19, in GetPositionAPI
+    return jsonify({"current_position": get_position})
+  File "/usr/lib/python3/dist-packages/flask/json/__init__.py", line 370, in jsonify
+    dumps(data, indent=indent, separators=separators) + "\n",
+  File "/usr/lib/python3/dist-packages/flask/json/__init__.py", line 211, in dumps
+    rv = _json.dumps(obj, **kwargs)
+  File "/usr/lib/python3/dist-packages/simplejson/__init__.py", line 398, in dumps
+    return cls(
+  File "/usr/lib/python3/dist-packages/simplejson/encoder.py", line 296, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3/dist-packages/simplejson/encoder.py", line 378, in iterencode
+    return _iterencode(o, 0)
+  File "/usr/lib/python3/dist-packages/flask/json/__init__.py", line 100, in default
+    return _json.JSONEncoder.default(self, o)
+  File "/usr/lib/python3/dist-packages/simplejson/encoder.py", line 272, in default
+    raise TypeError('Object of type %s is not JSON serializable' %
+TypeError: Object of type function is not JSON serializable
+2022-05-10 15:51:36 INFO     192.168.1.141 - - [10/May/2022 15:51:36] "[35m[1mGET /api/position HTTP/1.1[0m" 500 -
+2022-05-10 15:53:01 INFO      * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2022-05-10 15:53:04 INFO     192.168.1.141 - - [10/May/2022 15:53:04] "[37mGET /api/position HTTP/1.1[0m" 200 -
+2022-05-10 15:53:07 INFO     192.168.1.141 - - [10/May/2022 15:53:07] "[37mGET /api/position HTTP/1.1[0m" 200 -
+2022-05-10 15:53:07 INFO     192.168.1.141 - - [10/May/2022 15:53:07] "[37mGET /api/position HTTP/1.1[0m" 200 -
+2022-05-10 16:08:54 INFO      * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2022-05-10 16:08:57 ERROR    Exception on /api/position [GET]
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/pi/.local/lib/python3.9/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python3/dist-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/pi/dev/CTelescope-Server/routes/telescope_control.py", line 19, in GetPositionAPI
+    return jsonify({"current_position": get_position})
+  File "/usr/lib/python3/dist-packages/flask/json/__init__.py", line 370, in jsonify
+    dumps(data, indent=indent, separators=separators) + "\n",
+  File "/usr/lib/python3/dist-packages/flask/json/__init__.py", line 211, in dumps
+    rv = _json.dumps(obj, **kwargs)
+  File "/usr/lib/python3/dist-packages/simplejson/__init__.py", line 398, in dumps
+    return cls(
+  File "/usr/lib/python3/dist-packages/simplejson/encoder.py", line 296, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3/dist-packages/simplejson/encoder.py", line 378, in iterencode
+    return _iterencode(o, 0)
+  File "/usr/lib/python3/dist-packages/flask/json/__init__.py", line 100, in default
+    return _json.JSONEncoder.default(self, o)
+  File "/usr/lib/python3/dist-packages/simplejson/encoder.py", line 272, in default
+    raise TypeError('Object of type %s is not JSON serializable' %
+TypeError: Object of type function is not JSON serializable
+2022-05-10 16:08:57 INFO     192.168.1.141 - - [10/May/2022 16:08:57] "[35m[1mGET /api/position HTTP/1.1[0m" 500 -
+2022-05-10 16:09:14 INFO     Clean up GPIOs
+2022-05-10 16:09:14 INFO     End of program
+2022-05-10 16:09:17 INFO      * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2022-05-10 16:09:18 ERROR    Exception on /api/position [GET]
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/pi/.local/lib/python3.9/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python3/dist-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/pi/dev/CTelescope-Server/routes/telescope_control.py", line 19, in GetPositionAPI
+    return jsonify({"current_position": get_position})
+  File "/usr/lib/python3/dist-packages/flask/json/__init__.py", line 370, in jsonify
+    dumps(data, indent=indent, separators=separators) + "\n",
+  File "/usr/lib/python3/dist-packages/flask/json/__init__.py", line 211, in dumps
+    rv = _json.dumps(obj, **kwargs)
+  File "/usr/lib/python3/dist-packages/simplejson/__init__.py", line 398, in dumps
+    return cls(
+  File "/usr/lib/python3/dist-packages/simplejson/encoder.py", line 296, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3/dist-packages/simplejson/encoder.py", line 378, in iterencode
+    return _iterencode(o, 0)
+  File "/usr/lib/python3/dist-packages/flask/json/__init__.py", line 100, in default
+    return _json.JSONEncoder.default(self, o)
+  File "/usr/lib/python3/dist-packages/simplejson/encoder.py", line 272, in default
+    raise TypeError('Object of type %s is not JSON serializable' %
+TypeError: Object of type function is not JSON serializable
+2022-05-10 16:09:18 INFO     192.168.1.141 - - [10/May/2022 16:09:18] "[35m[1mGET /api/position HTTP/1.1[0m" 500 -
+2022-05-10 16:10:28 INFO     Clean up GPIOs
+2022-05-10 16:10:28 INFO     End of program
+2022-05-10 16:10:32 INFO      * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2022-05-10 16:10:34 ERROR    Exception on /api/position [GET]
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/pi/.local/lib/python3.9/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python3/dist-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/pi/dev/CTelescope-Server/routes/telescope_control.py", line 19, in GetPositionAPI
+    return jsonify({"current_position": get_position})
+  File "/usr/lib/python3/dist-packages/flask/json/__init__.py", line 370, in jsonify
+    dumps(data, indent=indent, separators=separators) + "\n",
+  File "/usr/lib/python3/dist-packages/flask/json/__init__.py", line 211, in dumps
+    rv = _json.dumps(obj, **kwargs)
+  File "/usr/lib/python3/dist-packages/simplejson/__init__.py", line 398, in dumps
+    return cls(
+  File "/usr/lib/python3/dist-packages/simplejson/encoder.py", line 296, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3/dist-packages/simplejson/encoder.py", line 378, in iterencode
+    return _iterencode(o, 0)
+  File "/usr/lib/python3/dist-packages/flask/json/__init__.py", line 100, in default
+    return _json.JSONEncoder.default(self, o)
+  File "/usr/lib/python3/dist-packages/simplejson/encoder.py", line 272, in default
+    raise TypeError('Object of type %s is not JSON serializable' %
+TypeError: Object of type function is not JSON serializable
+2022-05-10 16:10:34 INFO     192.168.1.141 - - [10/May/2022 16:10:34] "[35m[1mGET /api/position HTTP/1.1[0m" 500 -
+2022-05-10 16:13:56 ERROR    Exception on /api/position [GET]
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/pi/.local/lib/python3.9/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python3/dist-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/pi/dev/CTelescope-Server/routes/telescope_control.py", line 19, in GetPositionAPI
+    return jsonify({"current_position": get_position})
+  File "/usr/lib/python3/dist-packages/flask/json/__init__.py", line 370, in jsonify
+    dumps(data, indent=indent, separators=separators) + "\n",
+  File "/usr/lib/python3/dist-packages/flask/json/__init__.py", line 211, in dumps
+    rv = _json.dumps(obj, **kwargs)
+  File "/usr/lib/python3/dist-packages/simplejson/__init__.py", line 398, in dumps
+    return cls(
+  File "/usr/lib/python3/dist-packages/simplejson/encoder.py", line 296, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3/dist-packages/simplejson/encoder.py", line 378, in iterencode
+    return _iterencode(o, 0)
+  File "/usr/lib/python3/dist-packages/flask/json/__init__.py", line 100, in default
+    return _json.JSONEncoder.default(self, o)
+  File "/usr/lib/python3/dist-packages/simplejson/encoder.py", line 272, in default
+    raise TypeError('Object of type %s is not JSON serializable' %
+TypeError: Object of type function is not JSON serializable
+2022-05-10 16:13:56 INFO     192.168.1.141 - - [10/May/2022 16:13:56] "[35m[1mGET /api/position HTTP/1.1[0m" 500 -
+2022-05-10 16:13:58 INFO     Clean up GPIOs
+2022-05-10 16:13:58 INFO     End of program
+2022-05-10 16:14:01 INFO      * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2022-05-10 16:14:03 ERROR    Exception on /api/position [GET]
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/pi/.local/lib/python3.9/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python3/dist-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/pi/dev/CTelescope-Server/routes/telescope_control.py", line 19, in GetPositionAPI
+    return jsonify({"current_position": get_position})
+  File "/usr/lib/python3/dist-packages/flask/json/__init__.py", line 370, in jsonify
+    dumps(data, indent=indent, separators=separators) + "\n",
+  File "/usr/lib/python3/dist-packages/flask/json/__init__.py", line 211, in dumps
+    rv = _json.dumps(obj, **kwargs)
+  File "/usr/lib/python3/dist-packages/simplejson/__init__.py", line 398, in dumps
+    return cls(
+  File "/usr/lib/python3/dist-packages/simplejson/encoder.py", line 296, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3/dist-packages/simplejson/encoder.py", line 378, in iterencode
+    return _iterencode(o, 0)
+  File "/usr/lib/python3/dist-packages/flask/json/__init__.py", line 100, in default
+    return _json.JSONEncoder.default(self, o)
+  File "/usr/lib/python3/dist-packages/simplejson/encoder.py", line 272, in default
+    raise TypeError('Object of type %s is not JSON serializable' %
+TypeError: Object of type function is not JSON serializable
+2022-05-10 16:14:03 INFO     192.168.1.141 - - [10/May/2022 16:14:03] "[35m[1mGET /api/position HTTP/1.1[0m" 500 -
+2022-05-10 16:14:59 ERROR    Exception on /api/position [GET]
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/pi/.local/lib/python3.9/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python3/dist-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/pi/dev/CTelescope-Server/routes/telescope_control.py", line 19, in GetPositionAPI
+    return jsonify({"current_position": get_position})
+  File "/usr/lib/python3/dist-packages/flask/json/__init__.py", line 370, in jsonify
+    dumps(data, indent=indent, separators=separators) + "\n",
+  File "/usr/lib/python3/dist-packages/flask/json/__init__.py", line 211, in dumps
+    rv = _json.dumps(obj, **kwargs)
+  File "/usr/lib/python3/dist-packages/simplejson/__init__.py", line 398, in dumps
+    return cls(
+  File "/usr/lib/python3/dist-packages/simplejson/encoder.py", line 296, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3/dist-packages/simplejson/encoder.py", line 378, in iterencode
+    return _iterencode(o, 0)
+  File "/usr/lib/python3/dist-packages/flask/json/__init__.py", line 100, in default
+    return _json.JSONEncoder.default(self, o)
+  File "/usr/lib/python3/dist-packages/simplejson/encoder.py", line 272, in default
+    raise TypeError('Object of type %s is not JSON serializable' %
+TypeError: Object of type function is not JSON serializable
+2022-05-10 16:14:59 INFO     192.168.1.141 - - [10/May/2022 16:14:59] "[35m[1mGET /api/position HTTP/1.1[0m" 500 -
+2022-05-10 16:15:01 INFO     Clean up GPIOs
+2022-05-10 16:15:01 INFO     End of program
+2022-05-10 16:15:04 INFO      * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2022-05-10 16:15:04 ERROR    Exception on /api/position [GET]
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/pi/.local/lib/python3.9/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python3/dist-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/pi/dev/CTelescope-Server/routes/telescope_control.py", line 19, in GetPositionAPI
+    return jsonify({"current_position": get_position})
+  File "/usr/lib/python3/dist-packages/flask/json/__init__.py", line 370, in jsonify
+    dumps(data, indent=indent, separators=separators) + "\n",
+  File "/usr/lib/python3/dist-packages/flask/json/__init__.py", line 211, in dumps
+    rv = _json.dumps(obj, **kwargs)
+  File "/usr/lib/python3/dist-packages/simplejson/__init__.py", line 398, in dumps
+    return cls(
+  File "/usr/lib/python3/dist-packages/simplejson/encoder.py", line 296, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3/dist-packages/simplejson/encoder.py", line 378, in iterencode
+    return _iterencode(o, 0)
+  File "/usr/lib/python3/dist-packages/flask/json/__init__.py", line 100, in default
+    return _json.JSONEncoder.default(self, o)
+  File "/usr/lib/python3/dist-packages/simplejson/encoder.py", line 272, in default
+    raise TypeError('Object of type %s is not JSON serializable' %
+TypeError: Object of type function is not JSON serializable
+2022-05-10 16:15:04 INFO     192.168.1.141 - - [10/May/2022 16:15:04] "[35m[1mGET /api/position HTTP/1.1[0m" 500 -
+2022-05-10 16:16:16 ERROR    Exception on /api/position [GET]
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/pi/.local/lib/python3.9/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python3/dist-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/pi/dev/CTelescope-Server/routes/telescope_control.py", line 19, in GetPositionAPI
+    return jsonify(get_position())
+  File "/usr/lib/python3/dist-packages/flask/json/__init__.py", line 370, in jsonify
+    dumps(data, indent=indent, separators=separators) + "\n",
+  File "/usr/lib/python3/dist-packages/flask/json/__init__.py", line 211, in dumps
+    rv = _json.dumps(obj, **kwargs)
+  File "/usr/lib/python3/dist-packages/simplejson/__init__.py", line 398, in dumps
+    return cls(
+  File "/usr/lib/python3/dist-packages/simplejson/encoder.py", line 296, in encode
+    chunks = self.iterencode(o, _one_shot=True)
+  File "/usr/lib/python3/dist-packages/simplejson/encoder.py", line 378, in iterencode
+    return _iterencode(o, 0)
+  File "/usr/lib/python3/dist-packages/flask/json/__init__.py", line 100, in default
+    return _json.JSONEncoder.default(self, o)
+  File "/usr/lib/python3/dist-packages/simplejson/encoder.py", line 272, in default
+    raise TypeError('Object of type %s is not JSON serializable' %
+TypeError: Object of type function is not JSON serializable
+2022-05-10 16:16:16 INFO     192.168.1.141 - - [10/May/2022 16:16:16] "[35m[1mGET /api/position HTTP/1.1[0m" 500 -
+2022-05-10 16:16:18 INFO     Clean up GPIOs
+2022-05-10 16:16:18 INFO     End of program
+2022-05-10 16:16:21 INFO      * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2022-05-10 16:16:22 INFO     192.168.1.141 - - [10/May/2022 16:16:22] "[37mGET /api/position HTTP/1.1[0m" 200 -
+2022-05-10 16:37:31 INFO     192.168.1.129 - - [10/May/2022 16:37:31] "[37mGET /api/catalogues HTTP/1.1[0m" 200 -
+2022-05-10 16:37:33 INFO     192.168.1.129 - - [10/May/2022 16:37:33] "[37mGET /api/objet_cata/1 HTTP/1.1[0m" 200 -
+2022-05-10 16:44:53 INFO     192.168.1.129 - - [10/May/2022 16:44:53] "[37mGET /api/catalogues HTTP/1.1[0m" 200 -
+2022-05-10 16:44:54 INFO     192.168.1.129 - - [10/May/2022 16:44:54] "[37mGET /api/objet_cata/1 HTTP/1.1[0m" 200 -
+2022-05-10 16:45:21 INFO     192.168.1.87 - - [10/May/2022 16:45:21] "[37mGET /api/catalogues HTTP/1.1[0m" 200 -
+2022-05-10 16:45:22 INFO     192.168.1.87 - - [10/May/2022 16:45:22] "[37mGET /api/objet_cata/1 HTTP/1.1[0m" 200 -
+2022-05-10 16:50:32 INFO     Clean up GPIOs
+2022-05-10 16:50:32 INFO     End of program
+2022-05-10 16:50:37 INFO      * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2022-05-10 16:50:37 INFO     192.168.1.129 - - [10/May/2022 16:50:37] "[37mGET /api/catalogues HTTP/1.1[0m" 200 -
+2022-05-10 16:50:38 INFO     192.168.1.129 - - [10/May/2022 16:50:38] "[37mGET /api/objet_cata/1 HTTP/1.1[0m" 200 -
+2022-05-10 16:50:42 INFO     192.168.1.141 - - [10/May/2022 16:50:42] "[37mGET /api/position HTTP/1.1[0m" 200 -
+2022-05-10 16:51:12 INFO     192.168.1.141 - - [10/May/2022 16:51:12] "[31m[1mPOST /api/goto HTTP/1.1[0m" 400 -
+2022-05-10 16:51:48 INFO     192.168.1.129 - - [10/May/2022 16:51:48] "[37mGET /api/objet_cata/undefined HTTP/1.1[0m" 200 -
+2022-05-10 16:52:01 INFO     192.168.1.129 - - [10/May/2022 16:52:01] "[37mGET /api/objet_cata/undefined HTTP/1.1[0m" 200 -
+2022-05-10 16:53:31 DEBUG    +22:01:01, 05:34:33
+2022-05-10 16:53:31 ERROR    Exception on /api/goto [POST]
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/pi/.local/lib/python3.9/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python3/dist-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/pi/.local/lib/python3.9/site-packages/flask_cors/decorator.py", line 128, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "/home/pi/dev/CTelescope-Server/routes/telescope_control.py", line 40, in api_doSteps
+    res = run(goto(AD,DEC))
+TypeError: goto() takes 1 positional argument but 2 were given
+2022-05-10 16:53:31 INFO     192.168.1.141 - - [10/May/2022 16:53:31] "[35m[1mPOST /api/goto HTTP/1.1[0m" 500 -
+2022-05-10 16:53:45 INFO     192.168.1.129 - - [10/May/2022 16:53:45] "[37mGET /api/objet_cata/undefined HTTP/1.1[0m" 200 -
+2022-05-10 16:53:47 INFO     192.168.1.129 - - [10/May/2022 16:53:47] "[37mGET /api/objet_cata/undefined HTTP/1.1[0m" 200 -
+2022-05-10 16:53:48 INFO     192.168.1.129 - - [10/May/2022 16:53:48] "[37mGET /api/objet_cata/undefined HTTP/1.1[0m" 200 -
+2022-05-10 16:53:51 INFO     192.168.1.129 - - [10/May/2022 16:53:51] "[37mGET /api/catalogues HTTP/1.1[0m" 200 -
+2022-05-10 16:53:53 ERROR    Exception on /api/goto [POST]
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/pi/.local/lib/python3.9/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python3/dist-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/pi/.local/lib/python3.9/site-packages/flask_cors/decorator.py", line 128, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "/home/pi/dev/CTelescope-Server/routes/telescope_control.py", line 35, in api_doSteps
+    logger.debug(f"{payload['AD']}, {payload['Dec']}")
+KeyError: 'AD'
+2022-05-10 16:53:53 INFO     192.168.1.141 - - [10/May/2022 16:53:53] "[35m[1mPOST /api/goto HTTP/1.1[0m" 500 -
+2022-05-10 16:53:55 INFO     192.168.1.129 - - [10/May/2022 16:53:55] "[37mGET /api/catalogues HTTP/1.1[0m" 200 -
+2022-05-10 16:53:56 INFO     192.168.1.129 - - [10/May/2022 16:53:56] "[37mGET /api/objet_cata/1 HTTP/1.1[0m" 200 -
+2022-05-10 16:54:30 INFO     Clean up GPIOs
+2022-05-10 16:54:30 INFO     End of program
+2022-05-10 16:54:33 INFO      * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2022-05-10 16:54:35 ERROR    Exception on /api/goto [POST]
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/pi/.local/lib/python3.9/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python3/dist-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/pi/.local/lib/python3.9/site-packages/flask_cors/decorator.py", line 128, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "/home/pi/dev/CTelescope-Server/routes/telescope_control.py", line 35, in api_doSteps
+    logger.debug(f"{payload['AD']}, {payload['Dec']}")
+KeyError: 'AD'
+2022-05-10 16:54:35 INFO     192.168.1.141 - - [10/May/2022 16:54:35] "[35m[1mPOST /api/goto HTTP/1.1[0m" 500 -
+2022-05-10 16:54:55 DEBUG    +22:01:01, 05:34:33
+2022-05-10 16:54:55 ERROR    Exception on /api/goto [POST]
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/pi/.local/lib/python3.9/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python3/dist-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/pi/.local/lib/python3.9/site-packages/flask_cors/decorator.py", line 128, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "/home/pi/dev/CTelescope-Server/routes/telescope_control.py", line 40, in api_doSteps
+    res = run(goto(AD,DEC))
+TypeError: goto() takes 1 positional argument but 2 were given
+2022-05-10 16:54:55 INFO     192.168.1.141 - - [10/May/2022 16:54:55] "[35m[1mPOST /api/goto HTTP/1.1[0m" 500 -
+2022-05-10 16:55:05 DEBUG    +22:01:01, 05:34:33
+2022-05-10 16:55:05 ERROR    Exception on /api/goto [POST]
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/pi/.local/lib/python3.9/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python3/dist-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/pi/.local/lib/python3.9/site-packages/flask_cors/decorator.py", line 128, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "/home/pi/dev/CTelescope-Server/routes/telescope_control.py", line 40, in api_doSteps
+    res = run(goto(AD,DEC))
+TypeError: goto() takes 1 positional argument but 2 were given
+2022-05-10 16:55:05 INFO     192.168.1.141 - - [10/May/2022 16:55:05] "[35m[1mPOST /api/goto HTTP/1.1[0m" 500 -
+2022-05-10 16:55:19 INFO     192.168.1.129 - - [10/May/2022 16:55:19] "[37mGET /api/objet_cata/undefined HTTP/1.1[0m" 200 -
+2022-05-10 16:55:35 DEBUG    +22:01:01, 05:34:33
+2022-05-10 16:55:35 ERROR    Exception on /api/goto [POST]
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/pi/.local/lib/python3.9/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python3/dist-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/pi/.local/lib/python3.9/site-packages/flask_cors/decorator.py", line 128, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "/home/pi/dev/CTelescope-Server/routes/telescope_control.py", line 40, in api_doSteps
+    res = run(goto(AD,DEC))
+TypeError: goto() takes 1 positional argument but 2 were given
+2022-05-10 16:55:35 INFO     192.168.1.141 - - [10/May/2022 16:55:35] "[35m[1mPOST /api/goto HTTP/1.1[0m" 500 -
+2022-05-10 16:55:36 INFO     Clean up GPIOs
+2022-05-10 16:55:36 INFO     End of program
+2022-05-10 16:55:39 INFO      * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2022-05-10 16:55:45 DEBUG    +22:01:01, 05:34:33
+2022-05-10 16:55:45 ERROR    Exception on /api/goto [POST]
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/pi/.local/lib/python3.9/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python3/dist-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/pi/.local/lib/python3.9/site-packages/flask_cors/decorator.py", line 128, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "/home/pi/dev/CTelescope-Server/routes/telescope_control.py", line 40, in api_doSteps
+    res = run(goto(AD,DEC))
+TypeError: goto() takes 1 positional argument but 2 were given
+2022-05-10 16:55:45 INFO     192.168.1.141 - - [10/May/2022 16:55:45] "[35m[1mPOST /api/goto HTTP/1.1[0m" 500 -
+2022-05-10 16:56:54 INFO     192.168.1.129 - - [10/May/2022 16:56:54] "[37mGET /api/objet_cata/undefined HTTP/1.1[0m" 200 -
+2022-05-10 16:57:43 INFO     192.168.1.129 - - [10/May/2022 16:57:43] "[37mGET /api/objet_cata/undefined HTTP/1.1[0m" 200 -
+2022-05-10 16:57:47 INFO     192.168.1.129 - - [10/May/2022 16:57:47] "[37mGET /api/objet_cata/undefined HTTP/1.1[0m" 200 -
+2022-05-10 16:59:16 INFO     Clean up GPIOs
+2022-05-10 16:59:16 INFO     End of program
+2022-05-10 16:59:19 INFO      * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2022-05-10 16:59:25 DEBUG    +22:01:01, 05:34:33
+2022-05-10 16:59:25 ERROR    Exception on /api/goto [POST]
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/pi/.local/lib/python3.9/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python3/dist-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/pi/.local/lib/python3.9/site-packages/flask_cors/decorator.py", line 128, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "/home/pi/dev/CTelescope-Server/routes/telescope_control.py", line 42, in api_doSteps
+    res = run(goto(SkyCoord(AD,DEC)))
+  File "/home/pi/.local/lib/python3.9/site-packages/astropy/coordinates/sky_coordinate.py", line 331, in __init__
+    skycoord_kwargs, components, info = _parse_coordinate_data(
+  File "/home/pi/.local/lib/python3.9/site-packages/astropy/coordinates/sky_coordinate_parsers.py", line 296, in _parse_coordinate_data
+    _components[frame_attr_name] = attr_class(arg, unit=unit)
+  File "/home/pi/.local/lib/python3.9/site-packages/astropy/coordinates/angles.py", line 669, in __new__
+    self = super().__new__(cls, angle, unit=unit, **kwargs)
+  File "/home/pi/.local/lib/python3.9/site-packages/astropy/coordinates/angles.py", line 122, in __new__
+    angle, angle_unit = form.parse_angle(angle, unit)
+  File "/home/pi/.local/lib/python3.9/site-packages/astropy/coordinates/angle_formats.py", line 395, in parse_angle
+    return _AngleParser().parse(angle, unit, debug=debug)
+  File "/home/pi/.local/lib/python3.9/site-packages/astropy/coordinates/angle_formats.py", line 312, in parse
+    raise u.UnitsError("No unit specified")
+astropy.units.core.UnitsError: No unit specified
+2022-05-10 16:59:25 INFO     192.168.1.141 - - [10/May/2022 16:59:25] "[35m[1mPOST /api/goto HTTP/1.1[0m" 500 -
+2022-05-10 17:02:17 INFO     Clean up GPIOs
+2022-05-10 17:02:17 INFO     End of program
+2022-05-10 17:02:20 INFO      * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2022-05-10 17:02:21 DEBUG    +22:01:01, 05:34:33
+2022-05-10 17:02:21 ERROR    Exception on /api/goto [POST]
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/pi/.local/lib/python3.9/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python3/dist-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/pi/.local/lib/python3.9/site-packages/flask_cors/decorator.py", line 128, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "/home/pi/dev/CTelescope-Server/routes/telescope_control.py", line 40, in api_doSteps
+    COORD = SkyCoord(payload['AD'],payload['Dec'])
+  File "/home/pi/.local/lib/python3.9/site-packages/astropy/coordinates/sky_coordinate.py", line 331, in __init__
+    skycoord_kwargs, components, info = _parse_coordinate_data(
+  File "/home/pi/.local/lib/python3.9/site-packages/astropy/coordinates/sky_coordinate_parsers.py", line 296, in _parse_coordinate_data
+    _components[frame_attr_name] = attr_class(arg, unit=unit)
+  File "/home/pi/.local/lib/python3.9/site-packages/astropy/coordinates/angles.py", line 669, in __new__
+    self = super().__new__(cls, angle, unit=unit, **kwargs)
+  File "/home/pi/.local/lib/python3.9/site-packages/astropy/coordinates/angles.py", line 122, in __new__
+    angle, angle_unit = form.parse_angle(angle, unit)
+  File "/home/pi/.local/lib/python3.9/site-packages/astropy/coordinates/angle_formats.py", line 395, in parse_angle
+    return _AngleParser().parse(angle, unit, debug=debug)
+  File "/home/pi/.local/lib/python3.9/site-packages/astropy/coordinates/angle_formats.py", line 312, in parse
+    raise u.UnitsError("No unit specified")
+astropy.units.core.UnitsError: No unit specified
+2022-05-10 17:02:21 INFO     192.168.1.141 - - [10/May/2022 17:02:21] "[35m[1mPOST /api/goto HTTP/1.1[0m" 500 -
+2022-05-10 17:02:33 INFO     192.168.1.129 - - [10/May/2022 17:02:33] "[37mGET /api/catalogues HTTP/1.1[0m" 200 -
+2022-05-10 17:02:34 INFO     192.168.1.129 - - [10/May/2022 17:02:34] "[37mGET /api/objet_cata/1 HTTP/1.1[0m" 200 -
+2022-05-10 17:03:31 INFO     192.168.1.129 - - [10/May/2022 17:03:31] "[37mGET /api/objet_cata/undefined HTTP/1.1[0m" 200 -
+2022-05-10 17:03:32 INFO     192.168.1.129 - - [10/May/2022 17:03:32] "[37mGET /api/catalogues HTTP/1.1[0m" 200 -
+2022-05-10 17:03:35 INFO     192.168.1.129 - - [10/May/2022 17:03:35] "[37mGET /api/catalogues HTTP/1.1[0m" 200 -
+2022-05-10 17:03:36 INFO     192.168.1.129 - - [10/May/2022 17:03:36] "[37mGET /api/objet_cata/1 HTTP/1.1[0m" 200 -
+2022-05-10 17:04:04 INFO     192.168.1.129 - - [10/May/2022 17:04:04] "[37mGET /api/objet_cata/undefined HTTP/1.1[0m" 200 -
+2022-05-10 17:04:12 INFO     192.168.1.129 - - [10/May/2022 17:04:12] "[37mGET /api/catalogues HTTP/1.1[0m" 200 -
+2022-05-10 17:04:13 INFO     192.168.1.129 - - [10/May/2022 17:04:13] "[37mGET /api/objet_cata/1 HTTP/1.1[0m" 200 -
+2022-05-10 17:04:39 INFO     Clean up GPIOs
+2022-05-10 17:04:39 INFO     End of program
+2022-05-10 17:04:41 INFO      * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2022-05-10 17:04:46 DEBUG    +22:01:01, 05:34:33
+2022-05-10 17:04:46 ERROR    Exception on /api/goto [POST]
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/pi/.local/lib/python3.9/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python3/dist-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/pi/.local/lib/python3.9/site-packages/flask_cors/decorator.py", line 128, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "/home/pi/dev/CTelescope-Server/routes/telescope_control.py", line 40, in api_doSteps
+    COORD = SkyCoord(payload['AD'].to_string(sep='hms'),payload['Dec'].to_string(sep='hms'))
+AttributeError: 'str' object has no attribute 'to_string'
+2022-05-10 17:04:46 INFO     192.168.1.141 - - [10/May/2022 17:04:46] "[35m[1mPOST /api/goto HTTP/1.1[0m" 500 -
+2022-05-10 17:06:20 INFO     192.168.1.141 - - [10/May/2022 17:06:20] "[33mGET /api/get_objet HTTP/1.1[0m" 404 -
+2022-05-10 17:06:20 INFO     192.168.1.141 - - [10/May/2022 17:06:20] "[33mGET /favicon.ico HTTP/1.1[0m" 404 -
+2022-05-10 17:06:37 INFO     192.168.1.141 - - [10/May/2022 17:06:37] "[33mGET /api/get_objet HTTP/1.1[0m" 404 -
+2022-05-10 17:06:42 INFO     192.168.1.141 - - [10/May/2022 17:06:42] "[33mGET /api/objet HTTP/1.1[0m" 404 -
+2022-05-10 17:06:43 INFO     192.168.1.141 - - [10/May/2022 17:06:43] "[33mGET /api/objet HTTP/1.1[0m" 404 -
+2022-05-10 17:06:57 INFO     192.168.1.141 - - [10/May/2022 17:06:57] "[37mGET /api/position HTTP/1.1[0m" 200 -
+2022-05-10 17:09:05 INFO     192.168.1.129 - - [10/May/2022 17:09:05] "[37mGET /api/objet_cata/undefined HTTP/1.1[0m" 200 -
+2022-05-10 17:09:11 INFO     192.168.1.129 - - [10/May/2022 17:09:11] "[37mGET /api/catalogues HTTP/1.1[0m" 200 -
+2022-05-10 17:09:12 INFO     192.168.1.129 - - [10/May/2022 17:09:12] "[37mGET /api/objet_cata/1 HTTP/1.1[0m" 200 -
+2022-05-10 17:10:13 INFO     Clean up GPIOs
+2022-05-10 17:10:13 INFO     End of program
+2022-05-10 17:10:15 INFO      * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2022-05-10 17:10:20 DEBUG    +22:01:01, 05:34:33
+2022-05-10 17:10:20 ERROR    Exception on /api/goto [POST]
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/pi/.local/lib/python3.9/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python3/dist-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/pi/.local/lib/python3.9/site-packages/flask_cors/decorator.py", line 128, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "/home/pi/dev/CTelescope-Server/routes/telescope_control.py", line 39, in api_doSteps
+    COORD = SkyCoord(ad="22h01m01s",dec="05:34:33")
+  File "/home/pi/.local/lib/python3.9/site-packages/astropy/coordinates/sky_coordinate.py", line 331, in __init__
+    skycoord_kwargs, components, info = _parse_coordinate_data(
+  File "/home/pi/.local/lib/python3.9/site-packages/astropy/coordinates/sky_coordinate_parsers.py", line 240, in _parse_coordinate_data
+    valid_components.update(_get_representation_attrs(frame, units, kwargs))
+  File "/home/pi/.local/lib/python3.9/site-packages/astropy/coordinates/sky_coordinate_parsers.py", line 588, in _get_representation_attrs
+    valid_kwargs[frame_attr_name] = repr_attr_class(value, unit=unit)
+  File "/home/pi/.local/lib/python3.9/site-packages/astropy/coordinates/angles.py", line 562, in __new__
+    self = super().__new__(cls, angle, unit=unit, **kwargs)
+  File "/home/pi/.local/lib/python3.9/site-packages/astropy/coordinates/angles.py", line 122, in __new__
+    angle, angle_unit = form.parse_angle(angle, unit)
+  File "/home/pi/.local/lib/python3.9/site-packages/astropy/coordinates/angle_formats.py", line 395, in parse_angle
+    return _AngleParser().parse(angle, unit, debug=debug)
+  File "/home/pi/.local/lib/python3.9/site-packages/astropy/coordinates/angle_formats.py", line 312, in parse
+    raise u.UnitsError("No unit specified")
+astropy.units.core.UnitsError: No unit specified
+2022-05-10 17:10:20 INFO     192.168.1.141 - - [10/May/2022 17:10:20] "[35m[1mPOST /api/goto HTTP/1.1[0m" 500 -
+2022-05-10 17:10:30 INFO     192.168.1.129 - - [10/May/2022 17:10:30] "[37mGET /api/objet_cata/undefined HTTP/1.1[0m" 200 -
+2022-05-10 17:10:34 INFO     192.168.1.129 - - [10/May/2022 17:10:34] "[37mGET /api/catalogues HTTP/1.1[0m" 200 -
+2022-05-10 17:10:35 INFO     192.168.1.129 - - [10/May/2022 17:10:35] "[37mGET /api/objet_cata/1 HTTP/1.1[0m" 200 -
+2022-05-10 17:11:29 INFO     Clean up GPIOs
+2022-05-10 17:11:29 INFO     End of program
+2022-05-10 17:11:31 INFO      * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2022-05-10 17:11:34 DEBUG    +22:01:01, 05:34:33
+2022-05-10 17:11:35 ERROR    Exception on /api/goto [POST]
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/pi/.local/lib/python3.9/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python3/dist-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/pi/.local/lib/python3.9/site-packages/flask_cors/decorator.py", line 128, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "/home/pi/dev/CTelescope-Server/routes/telescope_control.py", line 39, in api_doSteps
+    COORD = SkyCoord(ad='8h50m59.75s', dec='+11d39m22.15s')
+  File "/home/pi/.local/lib/python3.9/site-packages/astropy/coordinates/sky_coordinate.py", line 331, in __init__
+    skycoord_kwargs, components, info = _parse_coordinate_data(
+  File "/home/pi/.local/lib/python3.9/site-packages/astropy/coordinates/sky_coordinate_parsers.py", line 263, in _parse_coordinate_data
+    raise ValueError('Unrecognized keyword argument(s) {}{}'
+ValueError: Unrecognized keyword argument(s) 'ad'
+2022-05-10 17:11:35 INFO     192.168.1.141 - - [10/May/2022 17:11:35] "[35m[1mPOST /api/goto HTTP/1.1[0m" 500 -
+2022-05-10 17:11:47 INFO     Clean up GPIOs
+2022-05-10 17:11:47 INFO     End of program
+2022-05-10 17:11:50 INFO      * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2022-05-10 17:11:50 DEBUG    +22:01:01, 05:34:33
+2022-05-10 17:11:50 DEBUG    Using selector: EpollSelector
+2022-05-10 17:11:50 DEBUG    Goto : AD = 8.01499779728806e-11 arcsecarc", DEC = -5.7249984266343286e-12 arcsecarc"
+2022-05-10 17:11:50 ERROR    Exception on /api/goto [POST]
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/pi/.local/lib/python3.9/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python3/dist-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/pi/.local/lib/python3.9/site-packages/flask_cors/decorator.py", line 128, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "/home/pi/dev/CTelescope-Server/routes/telescope_control.py", line 41, in api_doSteps
+    res = run(goto(COORD))
+  File "/usr/lib/python3.9/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.9/asyncio/base_events.py", line 642, in run_until_complete
+    return future.result()
+  File "/home/pi/dev/CTelescope-Server/libraries/goto.py", line 31, in goto
+    steps_AD  = round(AD.to(u.arcsec) / RESOLUTION_ARCSEC_AD)
+TypeError: type Angle doesn't define __round__ method
+2022-05-10 17:11:51 INFO     192.168.1.141 - - [10/May/2022 17:11:51] "[35m[1mPOST /api/goto HTTP/1.1[0m" 500 -
+2022-05-10 17:13:11 INFO     Clean up GPIOs
+2022-05-10 17:13:11 INFO     End of program
+2022-05-10 17:13:14 INFO      * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2022-05-10 17:15:31 INFO     192.168.1.129 - - [10/May/2022 17:15:31] "[33mOPTIONS /api/doSteps HTTP/1.1[0m" 404 -
+2022-05-10 17:20:15 DEBUG    +22:01:01, 05:34:33
+2022-05-10 17:20:15 DEBUG    Using selector: EpollSelector
+2022-05-10 17:20:15 DEBUG    Goto : AD = 8.01499779728806e-11 arcsecarc", DEC = -5.7249984266343286e-12 arcsecarc"
+2022-05-10 17:20:15 ERROR    Exception on /api/goto [POST]
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/pi/.local/lib/python3.9/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python3/dist-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/pi/.local/lib/python3.9/site-packages/flask_cors/decorator.py", line 128, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "/home/pi/dev/CTelescope-Server/routes/telescope_control.py", line 41, in api_doSteps
+    res = run(goto(COORD))
+  File "/usr/lib/python3.9/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.9/asyncio/base_events.py", line 642, in run_until_complete
+    return future.result()
+  File "/home/pi/dev/CTelescope-Server/libraries/goto.py", line 31, in goto
+    # steps_AD  = round(AD.to(u.arcsec) / RESOLUTION_ARCSEC_AD)
+TypeError: type Angle doesn't define __round__ method
+2022-05-10 17:20:15 INFO     192.168.1.141 - - [10/May/2022 17:20:15] "[35m[1mPOST /api/goto HTTP/1.1[0m" 500 -
+2022-05-10 17:20:29 INFO     Clean up GPIOs
+2022-05-10 17:20:29 INFO     End of program
+2022-05-10 17:20:32 INFO      * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2022-05-10 17:20:38 DEBUG    +22:01:01, 05:34:33
+2022-05-10 17:20:38 DEBUG    Using selector: EpollSelector
+2022-05-10 17:20:38 DEBUG    Goto : AD = 8.01499779728806e-11 arcsecarc", DEC = -5.7249984266343286e-12 arcsecarc"
+2022-05-10 17:20:38 DEBUG    [TypeError("object method can't be used in 'await' expression"), TypeError("object method can't be used in 'await' expression")]
+2022-05-10 17:20:38 FAILURES Some things wrong ! : {res}
+2022-05-10 17:20:38 INFO     192.168.1.141 - - [10/May/2022 17:20:38] "[35m[1mPOST /api/goto HTTP/1.1[0m" 500 -
+2022-05-10 17:23:27 INFO     Clean up GPIOs
+2022-05-10 17:23:27 INFO     End of program
+2022-05-10 17:24:08 INFO      * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2022-05-10 17:24:13 DEBUG    +22:01:01, 05:34:33
+2022-05-10 17:24:13 DEBUG    Using selector: EpollSelector
+2022-05-10 17:24:13 DEBUG    Goto : AD = 8.01499779728806e-11 arcsecarc", DEC = -5.7249984266343286e-12 arcsecarc"
+2022-05-10 17:24:13 DEBUG    [TypeError("unsupported operand type(s) for +: 'method' and 'float'"), TypeError("unsupported operand type(s) for +: 'method' and 'float'")]
+2022-05-10 17:24:13 FAILURES Some things wrong ! : [TypeError("unsupported operand type(s) for +: 'method' and 'float'"), TypeError("unsupported operand type(s) for +: 'method' and 'float'")]
+2022-05-10 17:24:13 INFO     192.168.1.141 - - [10/May/2022 17:24:13] "[35m[1mPOST /api/goto HTTP/1.1[0m" 500 -
+2022-05-10 17:24:43 INFO     Clean up GPIOs
+2022-05-10 17:24:43 INFO     End of program
+2022-05-10 17:24:46 INFO      * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2022-05-10 17:24:48 DEBUG    +22:01:01, 05:34:33
+2022-05-10 17:24:48 DEBUG    Using selector: EpollSelector
+2022-05-10 17:24:48 DEBUG    Goto : AD = 8.01499779728806e-11 arcsecarc", DEC = -5.7249984266343286e-12 arcsecarc"
+2022-05-10 17:24:48 DEBUG    [TypeError("object method can't be used in 'await' expression"), TypeError("object method can't be used in 'await' expression")]
+2022-05-10 17:24:48 FAILURES Some things wrong ! : [TypeError("object method can't be used in 'await' expression"), TypeError("object method can't be used in 'await' expression")]
+2022-05-10 17:24:48 INFO     192.168.1.141 - - [10/May/2022 17:24:48] "[35m[1mPOST /api/goto HTTP/1.1[0m" 500 -
+2022-05-10 17:25:14 INFO     Clean up GPIOs
+2022-05-10 17:25:14 INFO     End of program
+2022-05-10 17:25:17 INFO      * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2022-05-10 17:25:20 DEBUG    +22:01:01, 05:34:33
+2022-05-10 17:25:20 DEBUG    Using selector: EpollSelector
+2022-05-10 17:25:20 DEBUG    Goto : AD = 8.01499779728806e-11 arcsecarc", DEC = -5.7249984266343286e-12 arcsecarc"
+2022-05-10 17:25:20 INFO     Nombre de pas : 38400, Frequence : 7812.5Hz
+2022-05-10 17:25:20 INFO     Nombre de pas : 38400, Frequence : 7812.5Hz
+2022-05-10 17:25:20 DEBUG    [TypeError("object method can't be used in 'await' expression"), TypeError("object method can't be used in 'await' expression")]
+2022-05-10 17:25:20 FAILURES Some things wrong ! : [TypeError("object method can't be used in 'await' expression"), TypeError("object method can't be used in 'await' expression")]
+2022-05-10 17:25:20 INFO     192.168.1.141 - - [10/May/2022 17:25:20] "[35m[1mPOST /api/goto HTTP/1.1[0m" 500 -
+2022-05-10 17:25:39 INFO     Clean up GPIOs
+2022-05-10 17:25:39 INFO     End of program
+2022-05-10 17:26:05 INFO      * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2022-05-10 17:26:09 DEBUG    +22:01:01, 05:34:33
+2022-05-10 17:26:09 DEBUG    Using selector: EpollSelector
+2022-05-10 17:26:09 DEBUG    Goto : AD = 8.01499779728806e-11 arcsecarc", DEC = -5.7249984266343286e-12 arcsecarc"
+2022-05-10 17:26:09 INFO     Nombre de pas : 38400, Frequence : 7812.5Hz
+2022-05-10 17:26:09 INFO     Nombre de pas : 38400, Frequence : 7812.5Hz
+2022-05-10 17:26:09 DEBUG    [TypeError("object method can't be used in 'await' expression"), TypeError("object method can't be used in 'await' expression")]
+2022-05-10 17:26:09 FAILURES Some things wrong ! : [TypeError("object method can't be used in 'await' expression"), TypeError("object method can't be used in 'await' expression")]
+2022-05-10 17:26:09 INFO     192.168.1.141 - - [10/May/2022 17:26:09] "[35m[1mPOST /api/goto HTTP/1.1[0m" 500 -
+2022-05-10 17:26:19 INFO     Clean up GPIOs
+2022-05-10 17:26:19 INFO     End of program
+2022-05-10 17:26:22 INFO      * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2022-05-10 17:26:24 DEBUG    +22:01:01, 05:34:33
+2022-05-10 17:26:24 DEBUG    Using selector: EpollSelector
+2022-05-10 17:26:24 DEBUG    Goto : AD = 8.01499779728806e-11 arcsecarc", DEC = -5.7249984266343286e-12 arcsecarc"
+2022-05-10 17:26:24 DEBUG    [TypeError("object float can't be used in 'await' expression"), TypeError("object float can't be used in 'await' expression")]
+2022-05-10 17:26:24 FAILURES Some things wrong ! : [TypeError("object float can't be used in 'await' expression"), TypeError("object float can't be used in 'await' expression")]
+2022-05-10 17:26:24 INFO     192.168.1.141 - - [10/May/2022 17:26:24] "[35m[1mPOST /api/goto HTTP/1.1[0m" 500 -
+2022-05-10 17:26:42 INFO     Clean up GPIOs
+2022-05-10 17:26:42 INFO     End of program
+2022-05-10 17:26:46 INFO      * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2022-05-10 17:26:59 DEBUG    +22:01:01, 05:34:33
+2022-05-10 17:26:59 DEBUG    Using selector: EpollSelector
+2022-05-10 17:26:59 DEBUG    Goto : AD = 8.01499779728806e-11 arcsecarc", DEC = -5.7249984266343286e-12 arcsecarc"
+2022-05-10 17:26:59 DEBUG    [TypeError("object method can't be used in 'await' expression"), TypeError("object method can't be used in 'await' expression")]
+2022-05-10 17:26:59 FAILURES Some things wrong ! : [TypeError("object method can't be used in 'await' expression"), TypeError("object method can't be used in 'await' expression")]
+2022-05-10 17:26:59 INFO     192.168.1.141 - - [10/May/2022 17:26:59] "[35m[1mPOST /api/goto HTTP/1.1[0m" 500 -
+2022-05-10 17:28:13 INFO     Clean up GPIOs
+2022-05-10 17:28:13 INFO     End of program
+2022-05-10 17:28:16 INFO      * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2022-05-10 17:28:18 DEBUG    +22:01:01, 05:34:33
+2022-05-10 17:28:18 DEBUG    Using selector: EpollSelector
+2022-05-10 17:28:18 DEBUG    Goto : AD = 8.01499779728806e-11 arcsecarc", DEC = -5.7249984266343286e-12 arcsecarc"
+2022-05-10 17:28:18 DEBUG    [TypeError("object method can't be used in 'await' expression"), TypeError("object method can't be used in 'await' expression")]
+2022-05-10 17:28:18 FAILURES Some things wrong ! : [TypeError("object method can't be used in 'await' expression"), TypeError("object method can't be used in 'await' expression")]
+2022-05-10 17:28:18 INFO     192.168.1.141 - - [10/May/2022 17:28:18] "[35m[1mPOST /api/goto HTTP/1.1[0m" 500 -
+2022-05-10 17:31:07 INFO     Clean up GPIOs
+2022-05-10 17:31:07 INFO     End of program
+2022-05-10 17:31:09 INFO      * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2022-05-10 17:31:15 DEBUG    +22:01:01, 05:34:33
+2022-05-10 17:31:16 DEBUG    Using selector: EpollSelector
+2022-05-10 17:31:16 DEBUG    Goto : AD = 8.01499779728806e-11 arcsecarc", DEC = -5.7249984266343286e-12 arcsecarc"
+2022-05-10 17:31:16 ERROR    Exception on /api/goto [POST]
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/pi/.local/lib/python3.9/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python3/dist-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/pi/.local/lib/python3.9/site-packages/flask_cors/decorator.py", line 128, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "/home/pi/dev/CTelescope-Server/routes/telescope_control.py", line 41, in api_doSteps
+    res = run(goto(COORD))
+  File "/usr/lib/python3.9/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.9/asyncio/base_events.py", line 642, in run_until_complete
+    return future.result()
+  File "/home/pi/dev/CTelescope-Server/libraries/goto.py", line 31, in goto
+    steps_AD  = round(AD.to(u.arcsec) / RESOLUTION_ARCSEC_AD)
+TypeError: type Angle doesn't define __round__ method
+2022-05-10 17:31:16 INFO     192.168.1.141 - - [10/May/2022 17:31:16] "[35m[1mPOST /api/goto HTTP/1.1[0m" 500 -
+2022-05-10 17:32:40 DEBUG    +22:01:01, 05:34:33
+2022-05-10 17:32:40 DEBUG    Using selector: EpollSelector
+2022-05-10 17:32:40 DEBUG    Goto : AD = 8.01499779728806e-11 arcsecarc", DEC = -5.7249984266343286e-12 arcsecarc"
+2022-05-10 17:32:40 ERROR    Exception on /api/goto [POST]
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/pi/.local/lib/python3.9/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python3/dist-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/pi/.local/lib/python3.9/site-packages/flask_cors/decorator.py", line 128, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "/home/pi/dev/CTelescope-Server/routes/telescope_control.py", line 41, in api_doSteps
+    res = run(goto(COORD))
+  File "/usr/lib/python3.9/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.9/asyncio/base_events.py", line 642, in run_until_complete
+    return future.result()
+  File "/home/pi/dev/CTelescope-Server/libraries/goto.py", line 31, in goto
+    # steps_AD  = round(AD.to(u.arcsec) / RESOLUTION_ARCSEC_AD)
+TypeError: type Angle doesn't define __round__ method
+2022-05-10 17:32:40 INFO     192.168.1.141 - - [10/May/2022 17:32:40] "[35m[1mPOST /api/goto HTTP/1.1[0m" 500 -
+2022-05-10 17:33:09 INFO     Clean up GPIOs
+2022-05-10 17:33:09 INFO     End of program
+2022-05-10 17:33:11 INFO      * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2022-05-10 17:33:14 DEBUG    +22:01:01, 05:34:33
+2022-05-10 17:33:14 DEBUG    Using selector: EpollSelector
+2022-05-10 17:33:14 DEBUG    Goto : AD = 8.01499779728806e-11 arcsecarc", DEC = -5.7249984266343286e-12 arcsecarc"
+2022-05-10 17:33:14 DEBUG    [TypeError("object method can't be used in 'await' expression"), TypeError("object method can't be used in 'await' expression")]
+2022-05-10 17:33:14 FAILURES Some things wrong ! : [TypeError("object method can't be used in 'await' expression"), TypeError("object method can't be used in 'await' expression")]
+2022-05-10 17:33:14 INFO     192.168.1.141 - - [10/May/2022 17:33:14] "[35m[1mPOST /api/goto HTTP/1.1[0m" 500 -

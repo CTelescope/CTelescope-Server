@@ -8,7 +8,7 @@ import cv2
 ABS_DIRECTORY = path.dirname(path.realpath(__file__))
 URI = "http://192.168.1.30:8080/?action=stream"
 
-RECORD_STATUT = False
+record_status = False
 
 def Rafale(Duree, FPS) -> None:
     cap = cv2.VideoCapture(URI)
@@ -74,21 +74,21 @@ def Capture() -> None:
     cap.release()
 
 def StartRecord(FPS) -> None:
-    global RECORD_STATUT
+    global record_status
 
-    if RECORD_STATUT is False:
-        RECORD_STATUT = True
+    if record_status is False:
+        record_status = True
         x = Thread(target=_Record, args=(FPS,))
         x.start()
 
 def StopRecord() -> None:
-    global RECORD_STATUT
+    global record_status
 
-    if RECORD_STATUT is True:
-        RECORD_STATUT = False
+    if record_status is True:
+        record_status = False
 
 def _Record(FPS) -> None:
-    global RECORD_STATUT
+    global record_status
 
     cap = cv2.VideoCapture(URI)
 
@@ -102,7 +102,7 @@ def _Record(FPS) -> None:
 
     frames = []
 
-    while RECORD_STATUT:
+    while record_status:
         for _ in range(0,FPS):
             timer = perf_counter()
             

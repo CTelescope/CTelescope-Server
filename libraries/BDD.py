@@ -1,7 +1,7 @@
 import sqlite3
 
 def connect_to_db():
-    conn = sqlite3.connect('Telescope_BDD.db')
+    conn = sqlite3.connect('BDD_Telescope.db')
     return conn
 
 #table Objet
@@ -72,6 +72,35 @@ def get_object_by_id(Id_obj):
     
     return objet
 
+def get_object_by_cata(Id_cata):
+    objets = []
+    try:
+        conn = connect_to_db()
+        conn.row_factory = sqlite3.Row
+        cur = conn.cursor()
+        cur.execute("SELECT * FROM Objet Natural Join Type Natural Join Constellation Natural Join Catalogue  WHERE Id_cata = ? ",(Id_cata,))
+        rows = cur.fetchall()
+
+        # Convert
+        for i in rows:
+            objet = {}
+            objet["Id_obj"] = i["Id_obj"]
+            objet["Nom_obj"] = i["Nom_obj"]
+            objet["Ascension_droite"] = i["Ascension_droite"]
+            objet["Declinaison"] = i["Declinaison"]
+            objet["Magnitude"] = i["Magnitude"]
+            objet["Id_type"] = i["Id_type"]
+            objet["Id_const"] = i["Id_const"]
+            objet["Nom_type"] = i["Nom_type"]
+            objet["Nom_const"] = i["Nom_const"]
+            objet["Nom_cata"] = i["Nom_cata"]
+            objets.append(objet)
+    except:
+        objets = []
+    
+    return objets
+
+
 
 def update_object(objet):
     updated_object = {} 
@@ -117,7 +146,8 @@ objet ={
     "Declinaison": " ",
     "Magnitude": " ",
     "Id_type": " ",
-    "Id_const": " "
+    "Id_const": " ",
+    "Id_cata": " "
 }
 
 
@@ -199,3 +229,76 @@ def get_type_by_id(Id_type):
         _type = {}
     
     return _type
+
+
+#Table Catalogue
+def insert_cata(catalogue):
+    inserted_cata = {}
+    try:
+        conn = connect_to_db()
+        cur = conn.cursor()
+        cur.execute("INSERT INTO Catalogue (Nom_cata) VALUES (?)", 
+                    (catalogue['Id_cata']))
+        conn.commit()
+        inserted_cata = get_cata_by_id(cur.lastrowid)
+    except:
+        conn().rollback()
+
+    finally:
+        conn.close()
+
+    return inserted_cata
+
+
+def get_catalogues():
+    catalogues = []
+    try:
+        conn = connect_to_db()
+        conn.row_factory = sqlite3.Row
+        cur = conn.cursor()
+        cur.execute("SELECT * FROM Catalogue")
+        rows = cur.fetchall()
+
+        # Convert
+        for i in rows:
+            catalogue = {}
+            catalogue["Id_cata"] = i["Id_cata"]
+            catalogue["Nom_cata"] = i["Nom_cata"]
+            catalogues.append(catalogue)
+
+    except:
+        catalogues = []
+    return catalogues
+
+def get_cata_by_id(Id_cata):
+    catalogue = {}
+    try:
+        conn = connect_to_db()
+        conn.row_factory = sqlite3.Row
+        cur = conn.cursor()
+        cur.execute("SELECT * FROM Catalogue WHERE Id_cata = ?",(Id_cata,))
+        row = cur.fetchone()
+
+        # Convert
+        catalogue["Id_cata"] = row["Id_cata"]
+        catalogue["Nom_cata"] = row["Nom_cata"]
+    except:
+        catalogue = {}
+    
+    return catalogue
+
+def delete_Cata(Id_cata):
+    message = {}
+    try:
+        conn = connect_to_db()
+        conn.execute("DELETE FROM Catalogue WHERE Id_cata = ?",
+                    (Id_cata,))
+        conn.commit()
+        message["status"] = "Catalogue supprimer avec succès"
+    except:
+        conn.rollback()
+        message["status"] = "Impossible de supprimer le catalogue"
+    finally:
+        conn.close()
+
+    return message

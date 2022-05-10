@@ -12,10 +12,16 @@ def init_routes_db(app):
         return jsonify(get_objects())
 
     #-------------------------------------------------------
-    # Permet de récuperer un objet par sont Id
+    # Permet de récuperer un objet par son Id
     @app.route('/api/objet/<Id_obj>', methods = ['GET'])
     def api_get_object(Id_obj):
         return jsonify(get_object_by_id(Id_obj))
+
+    #-------------------------------------------------------
+    # Permet de récuperer les objets d'un catalogue par son Id
+    @app.route('/api/objet_cata/<Id_cata>', methods = ['GET'])
+    def api_get_objects_cata(Id_cata):
+        return jsonify(get_object_by_cata(Id_cata))
 
     #--------------------------------------------------------
     # Permet d'ajouter un objet
@@ -43,7 +49,7 @@ def init_routes_db(app):
         return jsonify(get_constellations())
 
     #--------------------------------------------------------
-    # Permet de récuperer une constellations par sont Id
+    # Permet de récuperer une constellations par son Id
     @app.route('/api/constellation/<Id_const>', methods = ['GET'])
     def api_get_const(Id_const):
         return jsonify(get_const_by_id(Id_const))
@@ -55,7 +61,32 @@ def init_routes_db(app):
         return jsonify(get_types())
 
     #--------------------------------------------------------
-    # Permet de récuperer un type par sont Id
+    # Permet de récuperer un type par son Id
     @app.route('/api/type/<Id_type>', methods = ['GET'])
     def api_get_type(Id_type):
         return jsonify(get_type_by_id(Id_type))
+
+    #--------------------------------------------------------
+    # Permet de récuperer un catalogue par son Id
+    @app.route('/api/catalogue/<Id_cata>', methods = ['GET'])
+    def api_get_cata(Id_cata):
+        return jsonify(get_cata_by_id(Id_cata))
+
+    #--------------------------------------------------------
+    # Permet de supprimper un catalogue par son Id
+    @app.route('/api/cata/delete/<Id_cata>', methods = ['DELETE'])
+    def api_delete_Cata(Id_cata):
+        return jsonify(delete_Cata(Id_cata))
+
+    #--------------------------------------------------------
+    # Permet d'ajouter un catalogue 
+    @app.route('/api/catalogue/add', methods = ['POST'])
+    def api_add_cata():
+        cata = request.get_json()
+        return jsonify(insert_cata(cata))
+
+    #--------------------------------------------------------
+    # Permet de récuperer les catalogues 
+    @app.route('/api/catalogues', methods = ['GET'])
+    def api_get_catas():
+        return jsonify(get_catalogues())
