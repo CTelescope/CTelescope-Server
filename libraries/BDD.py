@@ -4,8 +4,6 @@ def connect_to_db():
     conn = sqlite3.connect('Telescope_BDD.db')
     return conn
 
-
-
 #table Objet
 def insert_object(objet):
     inserted_object = {}
@@ -24,7 +22,6 @@ def insert_object(objet):
         conn.close()
 
     return inserted_object
-
 
 def get_objects():
     objets = []
@@ -50,7 +47,6 @@ def get_objects():
     except:
         objets = []
     return objets
-
 
 def get_object_by_id(Id_obj):
     objet = {}
@@ -166,9 +162,6 @@ def get_const_by_id(Id_const):
     
     return constellation
 
-
-
-
 #Table Type
 def get_types():
     types = []
@@ -189,8 +182,6 @@ def get_types():
     except:
         types = []
     return types
-
-
 
 def get_type_by_id(Id_type):
     _type = {}

@@ -1,0 +1,6 @@
+2022-05-09 14:08:01 INFO      * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2022-05-09 14:16:52 INFO      * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2022-05-09 14:16:54 SUCCESS  Server started.
+2022-05-09 14:16:54 INFO     Cleanup GPIOs
+2022-05-09 14:17:07 INFO      * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2022-05-09 14:17:09 INFO     Cleanup GPIOs

@@ -1,4 +1,6 @@
 flask
 flask_cors
-sqlite3
+#sudo apt-get install libatlas-base-dev
 opencv-python
+#pip install -U numpy
+numpy

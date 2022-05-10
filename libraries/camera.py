@@ -2,9 +2,7 @@ from datetime import datetime
 from time import sleep, perf_counter
 from os import path, makedirs
 from threading import Thread
-from xml.etree.ElementPath import prepare_descendant
 
-import numpy as np
 import cv2
 
 ABS_DIRECTORY = path.dirname(path.realpath(__file__))
@@ -15,7 +13,7 @@ RECORD_STATUT = False
 def Rafale(Duree, FPS) -> None:
     cap = cv2.VideoCapture(URI)
     d = datetime.now().strftime('%Y-%m-%d-%H-%M-%S')
-    frame_path = path.join(ABS_DIRECTORY, "Rafales/" + d)
+    frame_path = path.join(ABS_DIRECTORY, "gallery/rafales/" + d)
     
     if not path.exists(frame_path):
         makedirs(frame_path)
@@ -36,7 +34,7 @@ def Enregistrement(Duree, FPS) -> None:
     cap = cv2.VideoCapture(URI)
 
     d = datetime.now().strftime('%Y-%m-%d-%H-%M-%S')
-    record_path = path.join(ABS_DIRECTORY, "Enregistrements/")
+    record_path = path.join(ABS_DIRECTORY, "gallery/enregistrements/")
 
     if not path.exists(record_path):
         makedirs(record_path)
@@ -65,7 +63,7 @@ def Capture() -> None:
     cap = cv2.VideoCapture(URI)
 
     d = datetime.now().strftime('%Y-%m-%d-%H-%M-%S')
-    capture_path = path.join(ABS_DIRECTORY, "Captures/")
+    capture_path = path.join(ABS_DIRECTORY, "gallery/captures/")
 
     if not path.exists(capture_path):
         makedirs(capture_path)
@@ -95,7 +93,7 @@ def _Record(FPS) -> None:
     cap = cv2.VideoCapture(URI)
 
     d = datetime.now().strftime('%Y-%m-%d-%H-%M-%S')
-    record_path = path.join(ABS_DIRECTORY, "Enregistrements/")
+    record_path = path.join(ABS_DIRECTORY, "gallery/enregistrements/")
 
     if not path.exists(record_path):
         makedirs(record_path)
