@@ -1191,3 +1191,282 @@ TypeError: type Angle doesn't define __round__ method
 2022-05-10 17:33:14 DEBUG    [TypeError("object method can't be used in 'await' expression"), TypeError("object method can't be used in 'await' expression")]
 2022-05-10 17:33:14 FAILURES Some things wrong ! : [TypeError("object method can't be used in 'await' expression"), TypeError("object method can't be used in 'await' expression")]
 2022-05-10 17:33:14 INFO     192.168.1.141 - - [10/May/2022 17:33:14] "[35m[1mPOST /api/goto HTTP/1.1[0m" 500 -
+2022-05-10 17:39:16 INFO     Clean up GPIOs
+2022-05-10 17:39:16 INFO     End of program
+2022-05-10 17:39:19 INFO      * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2022-05-10 17:39:21 DEBUG    +22:01:01, 05:34:33
+2022-05-10 17:39:22 DEBUG    Using selector: EpollSelector
+2022-05-10 17:39:22 DEBUG    Goto : AD = 8.01499779728806e-11 arcsecarc", DEC = -5.7249984266343286e-12 arcsecarc"
+2022-05-10 17:39:22 DEBUG    [TypeError("object method can't be used in 'await' expression"), TypeError("object method can't be used in 'await' expression")]
+2022-05-10 17:39:22 FAILURES Some things wrong ! : [TypeError("object method can't be used in 'await' expression"), TypeError("object method can't be used in 'await' expression")]
+2022-05-10 17:39:22 INFO     192.168.1.141 - - [10/May/2022 17:39:22] "[35m[1mPOST /api/goto HTTP/1.1[0m" 500 -
+2022-05-10 17:39:26 INFO     Clean up GPIOs
+2022-05-10 17:39:26 INFO     End of program
+2022-05-11 14:24:14 INFO      * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2022-05-11 14:24:28 DEBUG    +22:01:01, 05:34:33
+2022-05-11 14:24:28 DEBUG    Using selector: EpollSelector
+2022-05-11 14:24:28 DEBUG    Goto : AD = 8.01499779728806e-11 arcsecarc", DEC = -5.7249984266343286e-12 arcsecarc"
+2022-05-11 14:24:28 DEBUG    [TypeError("object method can't be used in 'await' expression"), TypeError("object method can't be used in 'await' expression")]
+2022-05-11 14:24:28 FAILURES Some things wrong ! : [TypeError("object method can't be used in 'await' expression"), TypeError("object method can't be used in 'await' expression")]
+2022-05-11 14:24:28 INFO     192.168.1.141 - - [11/May/2022 14:24:28] "[35m[1mPOST /api/goto HTTP/1.1[0m" 500 -
+2022-05-11 14:28:22 DEBUG    +22:01:01, 05:34:33
+2022-05-11 14:28:23 DEBUG    Using selector: EpollSelector
+2022-05-11 14:28:23 DEBUG    Goto : AD = 8.01499779728806e-11 arcsecarc", DEC = -5.7249984266343286e-12 arcsecarc"
+2022-05-11 14:28:23 DEBUG    [TypeError("object method can't be used in 'await' expression"), TypeError("object method can't be used in 'await' expression")]
+2022-05-11 14:28:23 FAILURES Some things wrong ! : [TypeError("object method can't be used in 'await' expression"), TypeError("object method can't be used in 'await' expression")]
+2022-05-11 14:28:23 INFO     192.168.1.141 - - [11/May/2022 14:28:23] "[35m[1mPOST /api/goto HTTP/1.1[0m" 500 -
+2022-05-11 14:38:09 INFO     Clean up GPIOs
+2022-05-11 14:38:09 INFO     End of program
+2022-05-11 14:38:12 INFO      * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2022-05-11 14:38:35 DEBUG    +22:01:01, 05:34:33
+2022-05-11 14:38:35 DEBUG    Using selector: EpollSelector
+2022-05-11 14:38:35 DEBUG    Goto : AD = 8.01499779728806e-11 arcsecarc", DEC = -5.7249984266343286e-12 arcsecarc"
+2022-05-11 14:38:35 DEBUG    [TypeError("'int' object is not callable"), TypeError("'int' object is not callable")]
+2022-05-11 14:38:35 FAILURES Some things wrong ! : [TypeError("'int' object is not callable"), TypeError("'int' object is not callable")]
+2022-05-11 14:38:35 INFO     192.168.1.141 - - [11/May/2022 14:38:35] "[35m[1mPOST /api/goto HTTP/1.1[0m" 500 -
+2022-05-11 14:39:09 INFO     Clean up GPIOs
+2022-05-11 14:39:09 INFO     End of program
+2022-05-11 14:39:12 INFO      * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2022-05-11 14:39:13 DEBUG    +22:01:01, 05:34:33
+2022-05-11 14:39:13 DEBUG    Using selector: EpollSelector
+2022-05-11 14:39:13 DEBUG    Goto : AD = 8.01499779728806e-11 arcsecarc", DEC = -5.7249984266343286e-12 arcsecarc"
+2022-05-11 14:39:13 DEBUG    [TypeError("'int' object is not callable"), TypeError("'int' object is not callable")]
+2022-05-11 14:39:13 FAILURES Some things wrong ! : [TypeError("'int' object is not callable"), TypeError("'int' object is not callable")]
+2022-05-11 14:39:13 INFO     192.168.1.141 - - [11/May/2022 14:39:13] "[35m[1mPOST /api/goto HTTP/1.1[0m" 500 -
+2022-05-11 14:39:39 INFO     Clean up GPIOs
+2022-05-11 14:39:39 INFO     End of program
+2022-05-11 14:39:42 INFO      * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2022-05-11 14:39:44 DEBUG    +22:01:01, 05:34:33
+2022-05-11 14:39:44 DEBUG    Using selector: EpollSelector
+2022-05-11 14:39:44 DEBUG    Goto : AD = 8.01499779728806e-11 arcsecarc", DEC = -5.7249984266343286e-12 arcsecarc"
+2022-05-11 14:39:44 DEBUG    [TypeError("'int' object is not callable"), TypeError("'int' object is not callable")]
+2022-05-11 14:39:44 FAILURES Some things wrong ! : [TypeError("'int' object is not callable"), TypeError("'int' object is not callable")]
+2022-05-11 14:39:44 INFO     192.168.1.141 - - [11/May/2022 14:39:44] "[35m[1mPOST /api/goto HTTP/1.1[0m" 500 -
+2022-05-11 14:43:40 INFO     Clean up GPIOs
+2022-05-11 14:43:40 INFO     End of program
+2022-05-11 14:43:43 INFO      * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2022-05-11 14:44:13 INFO     Clean up GPIOs
+2022-05-11 14:44:13 INFO     End of program
+2022-05-11 14:44:16 INFO      * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2022-05-11 14:44:24 DEBUG    +22:01:01, 05:34:33
+2022-05-11 14:44:24 DEBUG    Using selector: EpollSelector
+2022-05-11 14:44:24 DEBUG    Goto : AD = 8.01499779728806e-11 arcsecarc", DEC = -5.7249984266343286e-12 arcsecarc"
+2022-05-11 14:44:24 INFO     0.000126 23 24
+2022-05-11 14:44:24 INFO     0.000126 20 21
+2022-05-11 14:44:24 DEBUG    [TypeError("'int' object is not callable"), TypeError("'int' object is not callable")]
+2022-05-11 14:44:24 FAILURES Some things wrong ! : [TypeError("'int' object is not callable"), TypeError("'int' object is not callable")]
+2022-05-11 14:44:24 INFO     192.168.1.141 - - [11/May/2022 14:44:24] "[35m[1mPOST /api/goto HTTP/1.1[0m" 500 -
+2022-05-11 14:45:16 INFO     Clean up GPIOs
+2022-05-11 14:45:16 INFO     End of program
+2022-05-11 14:45:19 INFO      * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2022-05-11 14:45:59 INFO     Clean up GPIOs
+2022-05-11 14:45:59 INFO     End of program
+2022-05-11 14:46:01 INFO      * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2022-05-11 14:46:04 DEBUG    +22:01:01, 05:34:33
+2022-05-11 14:46:04 DEBUG    Using selector: EpollSelector
+2022-05-11 14:46:04 DEBUG    Goto : AD = 8.01499779728806e-11 arcsecarc", DEC = -5.7249984266343286e-12 arcsecarc"
+2022-05-11 14:46:04 INFO     0.000126 23 24
+2022-05-11 14:46:04 INFO     0.000126 20 21
+2022-05-11 14:46:04 DEBUG    [TypeError("object NoneType can't be used in 'await' expression"), TypeError("object NoneType can't be used in 'await' expression")]
+2022-05-11 14:46:04 FAILURES Some things wrong ! : [TypeError("object NoneType can't be used in 'await' expression"), TypeError("object NoneType can't be used in 'await' expression")]
+2022-05-11 14:46:04 INFO     192.168.1.141 - - [11/May/2022 14:46:04] "[35m[1mPOST /api/goto HTTP/1.1[0m" 500 -
+2022-05-11 14:47:53 INFO     192.168.1.129 - - [11/May/2022 14:47:53] "[37mOPTIONS /api/rafales HTTP/1.1[0m" 200 -
+2022-05-11 14:47:59 INFO     192.168.1.129 - - [11/May/2022 14:47:59] "[37mPOST /api/rafales HTTP/1.1[0m" 200 -
+2022-05-11 14:52:27 ERROR    [Errno 98] Address already in use
+2022-05-11 14:52:27 INFO     Clean up GPIOs
+2022-05-11 14:52:27 INFO     End of program
+2022-05-11 14:52:47 ERROR    [Errno 98] Address already in use
+2022-05-11 14:52:47 INFO     Clean up GPIOs
+2022-05-11 14:52:47 INFO     End of program
+2022-05-11 14:55:41 INFO      * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2022-05-11 14:55:44 DEBUG    +22:01:01, 05:34:33
+2022-05-11 14:55:44 DEBUG    Using selector: EpollSelector
+2022-05-11 14:55:44 DEBUG    Goto : AD = 8.01499779728806e-11 arcsecarc", DEC = -5.7249984266343286e-12 arcsecarc"
+2022-05-11 14:55:44 INFO     0.000126 23 24
+2022-05-11 14:55:44 INFO     0.000126 20 21
+2022-05-11 14:56:30 DEBUG    [None, None]
+2022-05-11 14:56:30 SUCCESS  All steps are done !
+2022-05-11 14:56:30 INFO     192.168.1.141 - - [11/May/2022 14:56:30] "[37mPOST /api/goto HTTP/1.1[0m" 200 -
+2022-05-11 14:59:13 INFO     Clean up GPIOs
+2022-05-11 14:59:13 INFO     End of program
+2022-05-11 14:59:16 INFO      * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2022-05-11 14:59:18 DEBUG    +22:01:01, 05:34:33
+2022-05-11 14:59:18 DEBUG    Using selector: EpollSelector
+2022-05-11 14:59:18 DEBUG    Goto : AD = 8.01499779728806e-11 arcsecarc", DEC = -5.7249984266343286e-12 arcsecarc"
+2022-05-11 14:59:18 INFO     0.000126 23 24
+2022-05-11 14:59:18 INFO     0.000126 20 21
+2022-05-11 15:00:03 DEBUG    ok
+2022-05-11 15:00:03 DEBUG    ok
+2022-05-11 15:00:03 SUCCESS  All steps are done !
+2022-05-11 15:00:03 INFO     192.168.1.141 - - [11/May/2022 15:00:03] "[37mPOST /api/goto HTTP/1.1[0m" 200 -
+2022-05-11 15:00:08 INFO     Clean up GPIOs
+2022-05-11 15:00:08 INFO     End of program
+2022-05-11 15:04:45 INFO      * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2022-05-11 15:05:11 DEBUG    +22:01:01, 05:34:33
+2022-05-11 15:05:11 DEBUG    Using selector: EpollSelector
+2022-05-11 15:05:11 DEBUG    Goto : AD = 8.01499779728806e-11 arcsecarc", DEC = -5.7249984266343286e-12 arcsecarc"
+2022-05-11 15:05:11 INFO     0.000126 24 23
+2022-05-11 15:05:11 INFO     0.000126 20 21
+2022-05-11 15:05:56 DEBUG    ok
+2022-05-11 15:05:56 DEBUG    ok
+2022-05-11 15:05:56 SUCCESS  All steps are done !
+2022-05-11 15:05:56 INFO     192.168.1.141 - - [11/May/2022 15:05:56] "[37mPOST /api/goto HTTP/1.1[0m" 200 -
+2022-05-11 15:26:26 INFO     Clean up GPIOs
+2022-05-11 15:26:26 INFO     End of program
+2022-05-11 15:26:29 INFO      * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2022-05-11 15:26:32 DEBUG    +22:01:01, 05:34:33
+2022-05-11 15:26:32 DEBUG    Using selector: EpollSelector
+2022-05-11 15:26:32 DEBUG    Goto : AD = 8.01499779728806e-11 arcsecarc", DEC = -5.7249984266343286e-12 arcsecarc"
+2022-05-11 15:26:32 INFO     0.000126 23 24
+2022-05-11 15:26:32 INFO     0.000126 20 21
+2022-05-11 15:27:12 DEBUG    ok
+2022-05-11 15:27:12 DEBUG    ok
+2022-05-11 15:27:12 SUCCESS  All steps are done !
+2022-05-11 15:27:12 INFO     192.168.1.141 - - [11/May/2022 15:27:12] "[37mPOST /api/goto HTTP/1.1[0m" 200 -
+2022-05-11 15:27:34 DEBUG    +22:01:01, 05:34:33
+2022-05-11 15:27:34 DEBUG    Using selector: EpollSelector
+2022-05-11 15:27:34 DEBUG    Goto : AD = 8.01499779728806e-11 arcsecarc", DEC = -5.7249984266343286e-12 arcsecarc"
+2022-05-11 15:27:34 INFO     0.000126 23 24
+2022-05-11 15:27:34 INFO     0.000126 20 21
+2022-05-11 15:28:19 DEBUG    ok
+2022-05-11 15:28:19 DEBUG    ok
+2022-05-11 15:28:19 SUCCESS  All steps are done !
+2022-05-11 15:28:19 INFO     192.168.1.141 - - [11/May/2022 15:28:19] "[37mPOST /api/goto HTTP/1.1[0m" 200 -
+2022-05-11 15:31:10 INFO     Clean up GPIOs
+2022-05-11 15:31:10 INFO     End of program
+2022-05-11 15:31:13 INFO      * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2022-05-11 15:31:59 DEBUG    +22:01:01, 05:34:33
+2022-05-11 15:31:59 DEBUG    Using selector: EpollSelector
+2022-05-11 15:31:59 DEBUG    Goto : AD = 8.01499779728806e-11 arcsecarc", DEC = -5.7249984266343286e-12 arcsecarc"
+2022-05-11 15:31:59 INFO     0.000126 23 24
+2022-05-11 15:31:59 DEBUG    ok
+2022-05-11 15:31:59 INFO     0.000126 20 21
+2022-05-11 15:32:55 DEBUG    ok
+2022-05-11 15:32:55 SUCCESS  All steps are done !
+2022-05-11 15:32:55 INFO     192.168.1.141 - - [11/May/2022 15:32:55] "[37mPOST /api/goto HTTP/1.1[0m" 200 -
+2022-05-11 15:33:37 INFO     Clean up GPIOs
+2022-05-11 15:33:37 INFO     End of program
+2022-05-11 15:33:47 FAILURES Speed mode {mode} does not exist
+2022-05-11 15:33:47 FAILURES Speed mode {mode} does not exist
+2022-05-11 15:33:47 INFO      * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2022-05-11 15:34:14 INFO     Clean up GPIOs
+2022-05-11 15:34:14 INFO     End of program
+2022-05-11 15:34:25 SUCCESS  Speed mode {mode} sets
+2022-05-11 15:34:25 SUCCESS  Speed mode {mode} sets
+2022-05-11 15:34:25 INFO      * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2022-05-11 15:34:48 DEBUG    +22:01:01, 05:34:33
+2022-05-11 15:34:48 DEBUG    Using selector: EpollSelector
+2022-05-11 15:34:48 DEBUG    Goto : AD = 8.01499779728806e-11 arcsecarc", DEC = -5.7249984266343286e-12 arcsecarc"
+2022-05-11 15:34:48 INFO     1.4e-05 23 24
+2022-05-11 15:34:48 INFO     0.000126 20 21
+2022-05-11 15:35:01 DEBUG    ok
+2022-05-11 15:35:18 DEBUG    ok
+2022-05-11 15:35:18 SUCCESS  All steps are done !
+2022-05-11 15:35:18 INFO     192.168.1.141 - - [11/May/2022 15:35:18] "[37mPOST /api/goto HTTP/1.1[0m" 200 -
+2022-05-11 15:47:18 INFO     Clean up GPIOs
+2022-05-11 15:47:18 INFO     End of program
+2022-05-11 15:47:20 INFO      * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2022-05-11 15:47:26 DEBUG    +22:01:01, 05:34:33
+2022-05-11 15:47:26 DEBUG    Using selector: EpollSelector
+2022-05-11 15:47:26 DEBUG    Goto : AD = 2.226388277024461e-14 degarc", DEC = -1.590277340731758e-15 degarc"
+2022-05-11 15:47:26 INFO     0.000126 23 24
+2022-05-11 15:47:26 INFO     0.000126 20 21
+2022-05-11 15:48:15 DEBUG    ok
+2022-05-11 15:48:15 DEBUG    ok
+2022-05-11 15:48:15 SUCCESS  All steps are done !
+2022-05-11 15:48:15 INFO     192.168.1.141 - - [11/May/2022 15:48:15] "[37mPOST /api/goto HTTP/1.1[0m" 200 -
+2022-05-11 16:03:37 INFO     Clean up GPIOs
+2022-05-11 16:03:37 INFO     End of program
+2022-05-11 16:03:40 INFO      * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2022-05-11 16:04:06 DEBUG    +22:01:01, 05:34:33
+2022-05-11 16:04:06 DEBUG    Using selector: EpollSelector
+2022-05-11 16:04:06 DEBUG    Goto : AD = 2.226388277024461e-14 degarc", DEC = -1.590277340731758e-15 degarc"
+2022-05-11 16:04:06 INFO     MOTOR : DIR_PIN=23 STEP_PIN=24
+2022-05-11 16:04:06 INFO     MOTOR : DIR_PIN=20 STEP_PIN=21
+2022-05-11 16:04:56 DEBUG    MOTOR : DIR_PIN=23 STEP_PIN=24 | Done
+2022-05-11 16:04:56 DEBUG    MOTOR : DIR_PIN=20 STEP_PIN=21 | Done
+2022-05-11 16:04:56 SUCCESS  All steps are done !
+2022-05-11 16:04:56 INFO     192.168.1.141 - - [11/May/2022 16:04:56] "[37mPOST /api/goto HTTP/1.1[0m" 200 -
+2022-05-11 16:22:42 INFO     Clean up GPIOs
+2022-05-11 16:22:42 INFO     End of program
+2022-05-11 16:29:55 INFO      * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2022-05-11 16:30:01 DEBUG    +22:01:01, 05:34:33
+2022-05-11 16:30:01 DEBUG    Using selector: EpollSelector
+2022-05-11 16:30:01 DEBUG    Goto : AD = 2.226388277024461e-14 degarc", DEC = -1.590277340731758e-15 degarc"
+2022-05-11 16:30:01 ERROR    Exception on /api/goto [POST]
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/pi/.local/lib/python3.9/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python3/dist-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/pi/.local/lib/python3.9/site-packages/flask_cors/decorator.py", line 128, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "/home/pi/dev/CTelescope-Server/routes/telescope_control.py", line 41, in api_doSteps
+    res = run(goto(COORD))
+  File "/usr/lib/python3.9/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.9/asyncio/base_events.py", line 642, in run_until_complete
+    return future.result()
+  File "/home/pi/dev/CTelescope-Server/libraries/goto.py", line 37, in goto
+    steps_AD  = round(AD.to(u.arcsec) / RESOLUTION_ARCSEC_AD)
+TypeError: type Angle doesn't define __round__ method
+2022-05-11 16:30:01 INFO     192.168.1.141 - - [11/May/2022 16:30:01] "[35m[1mPOST /api/goto HTTP/1.1[0m" 500 -
+2022-05-11 16:30:32 DEBUG    +22h01m01s, 05h34m33s
+2022-05-11 16:30:32 DEBUG    Using selector: EpollSelector
+2022-05-11 16:30:32 DEBUG    Goto : AD = 2.226388277024461e-14 degarc", DEC = -1.590277340731758e-15 degarc"
+2022-05-11 16:30:32 ERROR    Exception on /api/goto [POST]
+Traceback (most recent call last):
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 2447, in wsgi_app
+    response = self.full_dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1952, in full_dispatch_request
+    rv = self.handle_user_exception(e)
+  File "/home/pi/.local/lib/python3.9/site-packages/flask_cors/extension.py", line 165, in wrapped_function
+    return cors_after_request(app.make_response(f(*args, **kwargs)))
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1821, in handle_user_exception
+    reraise(exc_type, exc_value, tb)
+  File "/usr/lib/python3/dist-packages/flask/_compat.py", line 39, in reraise
+    raise value
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1950, in full_dispatch_request
+    rv = self.dispatch_request()
+  File "/usr/lib/python3/dist-packages/flask/app.py", line 1936, in dispatch_request
+    return self.view_functions[rule.endpoint](**req.view_args)
+  File "/home/pi/.local/lib/python3.9/site-packages/flask_cors/decorator.py", line 128, in wrapped_function
+    resp = make_response(f(*args, **kwargs))
+  File "/home/pi/dev/CTelescope-Server/routes/telescope_control.py", line 41, in api_doSteps
+    res = run(goto(COORD))
+  File "/usr/lib/python3.9/asyncio/runners.py", line 44, in run
+    return loop.run_until_complete(main)
+  File "/usr/lib/python3.9/asyncio/base_events.py", line 642, in run_until_complete
+    return future.result()
+  File "/home/pi/dev/CTelescope-Server/libraries/goto.py", line 37, in goto
+    steps_AD  = round(AD.to(u.arcsec) / RESOLUTION_ARCSEC_AD)
+TypeError: type Angle doesn't define __round__ method
+2022-05-11 16:30:32 INFO     192.168.1.141 - - [11/May/2022 16:30:32] "[35m[1mPOST /api/goto HTTP/1.1[0m" 500 -
+2022-05-11 16:31:16 INFO     Clean up GPIOs
+2022-05-11 16:31:16 INFO     End of program
+2022-05-11 16:31:19 INFO      * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2022-05-11 16:31:22 DEBUG    +22h01m01s, 05h34m33s
+2022-05-11 16:31:22 DEBUG    Using selector: EpollSelector
+2022-05-11 16:31:22 DEBUG    Goto : AD = 2.226388277024461e-14 degarc", DEC = -1.590277340731758e-15 degarc"
+2022-05-11 16:31:22 DEBUG    Steps : AD = 8.489960629438833e-10 arcsec, DEC = -6.064257592456309e-11 arcsec
+2022-05-11 16:31:22 INFO     MOTOR AD : DIR_PIN=23 STEP_PIN=24 NB STEPS=38400
+2022-05-11 16:31:22 INFO     MOTOR DEC : DIR_PIN=20 STEP_PIN=21 NB STEPS=-38400
+2022-05-11 16:32:05 DEBUG    MOTOR AD : DIR_PIN=23 STEP_PIN=24 | Done
+2022-05-11 16:32:05 DEBUG    MOTOR DEC : DIR_PIN=20 STEP_PIN=21 | Done
+2022-05-11 16:32:05 SUCCESS  All steps are done !
+2022-05-11 16:32:05 INFO     192.168.1.141 - - [11/May/2022 16:32:05] "[37mPOST /api/goto HTTP/1.1[0m" 200 -
+2022-05-11 16:37:51 INFO     Clean up GPIOs
+2022-05-11 16:37:51 INFO     End of program
+2022-05-11 16:38:48 INFO      * Running on http://0.0.0.0:5000/ (Press CTRL+C to quit)
+2022-05-11 17:10:22 INFO     Clean up GPIOs
+2022-05-11 17:10:22 INFO     End of program

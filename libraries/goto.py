@@ -10,11 +10,17 @@ import math
 
 logger = setup_logger(__file__)
 
-MOTEUR_AD  = motor(MOTEUR_AD_PIN_DIR, MOTEUR_AD_PIN_STEP)
-MOTEUR_DEC = motor(MOTEUR_DEC_PIN_DIR, MOTEUR_DEC_PIN_STEP)
+MOTEUR_AD  = motor(MOTEUR_AD_PIN_DIR, MOTEUR_AD_PIN_STEP, "AD")
+MOTEUR_DEC = motor(MOTEUR_DEC_PIN_DIR, MOTEUR_DEC_PIN_STEP, "DEC")
 
-HOME = SkyCoord('8h50m59.75s', '+11d39m22.15s', frame="icrs") # Etoile polaire coord ?
+HOME = SkyCoord('8h50m59.75s', '+11d39m22.15s') # Etoile polaire coord ?
 current_position = HOME
+
+def set_speed_AD(speed):
+    MOTEUR_AD.set_speed(speed)
+
+def set_speed_DEC(speed):
+    MOTEUR_DEC.set_speed(speed)
 
 def get_position() -> dict:
     return {
@@ -26,28 +32,19 @@ async def goto(destination) -> tuple:
     
     AD, DEC = current_position.spherical_offsets_to(destination)
 
-    logger.debug(f"Goto : AD = {AD.to(u.arcsec)}arc\", DEC = {DEC.to(u.arcsec)}arc\"")
+    logger.debug(f"Goto : AD = {AD}arc\", DEC = {DEC}arc\"")
      
-    # steps_AD  = round(AD.to(u.arcsec) / RESOLUTION_ARCSEC_AD)
-    # steps_Dec = round(DEC.to(u.arcsec) / RESOLUTION_ARCSEC_DEC)
+    steps_AD  = AD.to(u.arcsec) / RESOLUTION_ARCSEC_AD
+    steps_Dec = DEC.to(u.arcsec) / RESOLUTION_ARCSEC_DEC
 
-    # logger.debug(f"Steps : AD = {steps_AD}, DEC = {steps_Dec}")
+    logger.debug(f"Steps : AD = {steps_AD}, DEC = {steps_Dec}")
 
     # TODO : if nb step > tour complet du telescope -> throw error
 
     coroutines = [
         MOTEUR_AD.do_steps(2400*16), 
-        MOTEUR_DEC.do_steps(2400*16),
+        MOTEUR_DEC.do_steps(-2400*16),
     ]
     
     res = await gather(*coroutines, return_exceptions=True)
     return res
-
-
-if __name__ == "__main__":
-    res = run(goto(NB_STEPS_MOTEUR_AD = 2400, NB_STEPS_MOTEUR_DEC = -2400))
-
-    if res[0] == None and res[1]==None:
-        logger.success("Done")
-    else :
-        logger.failures("")

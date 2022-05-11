@@ -17,9 +17,6 @@ MOTEUR_DEC_PIN_STEP = 21
 MOTEUR_AD_PIN_DIR  = 23
 MOTEUR_AD_PIN_STEP = 24
 
-CW  = HIGH    # Sens horaire
-CCW = LOW     # Sens anti horaire
-
 # Constantes Stepper Motor, Motor Driver, EQ3-2
 MOTOR_SPR               =   2400         # P542-M481U-G17L82
 MICRO_STEP_MODE         =   16           # TB6560
@@ -42,7 +39,8 @@ SLEEP_SPEED = {
 }
 
 class motor():
-    def __init__(self, direction_pin: int, stepper_pin: int):
+    def __init__(self, direction_pin: int, stepper_pin: int, name: str):
+        self.name = name
         self.temporize = SLEEP_SPEED[1]
         self.direction_pin = direction_pin
         self.stepper_pin = stepper_pin
@@ -51,18 +49,22 @@ class motor():
         gpio.setup(direction_pin, OUT)
         gpio.setup(stepper_pin, OUT)
     
-    def get_status(self):
-        return self.busy
+    def _set_status(self, status: bool):
+        self.busy = status
+        logger.debug(f"STATUS : MOTOR {self.name} -> {self.busy}")
 
     def set_speed(self, mode):
-        if mode in SLEEP_SPEED:
-            logger.success("Speed mode {mode} sets")
-            self.temporize = SLEEP_SPEED[mode]
+        if not self.busy:
+            if mode in SLEEP_SPEED:
+                logger.success("Speed mode {mode} sets")
+                self.temporize = SLEEP_SPEED[mode]
+                return 0
+            else:
+                logger.failures("Speed mode {mode} does not exist")
+                return 1
         else:
-            logger.failures("Speed mode {mode} does not exist")
-
-    async def get_speed(self):
-        return self.temporize
+            logger.warning(f'Unable to set speed. The motor is busy...')
+            return 2
 
     async def _make_a_step(self, step_pin: int):
         gpio.output(step_pin,HIGH)
@@ -74,11 +76,14 @@ class motor():
     async def do_steps(self, nb_steps: int ):
         #logger.info(f"Nombre de pas : {nb_steps}, Frequence : { (1 / (await self.get_speed() + STEP_TIME))}Hz" )
         # Définition du sens de rotation
-        if nb_steps < 0: 
-            gpio.output(self.direction_pin,CCW)
-        else:
-            gpio.output(self.direction_pin,CW)
+        logger.info(f"MOTOR {self.name} : DIR_PIN={self.direction_pin} STEP_PIN={self.stepper_pin} NB STEPS={nb_steps}")
+        
+        if nb_steps < 0: gpio.output(self.direction_pin,LOW) # Sens horaire
+        else: gpio.output(self.direction_pin,HIGH) # Sens anti horaire
+        
         # On effectue le nombre de pas
         for _ in range(abs(nb_steps)):
             await self._make_a_step(self.stepper_pin)
-            await sleep(await self.get_speed)
+            await sleep(self.temporize)
+        
+        logger.debug(f"MOTOR {self.name} : DIR_PIN={self.direction_pin} STEP_PIN={self.stepper_pin} | Done")

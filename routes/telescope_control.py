@@ -40,7 +40,6 @@ def init_routes_tls(app):
 
             res = run(goto(COORD))
             
-            logger.debug(res)
             if res[0] == None and res[1]==None:
                 logger.success("All steps are done !")
                 return {'status':'done'}, 200
