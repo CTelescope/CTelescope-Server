@@ -4,9 +4,14 @@ from os import path, makedirs
 from threading import Thread
 
 import cv2
+from numpy import record
+
+from libraries.logger import setup_logger
+
+logger = setup_logger(__file__)
 
 ABS_DIRECTORY = path.dirname(path.realpath(__file__))
-URI = "http://192.168.1.30:8080/?action=stream"
+URI = "http://0.0.0.0:8080/?action=stream"
 
 record_status = False
 
@@ -38,6 +43,8 @@ def Enregistrement(Duree, FPS) -> None:
 
     if not path.exists(record_path):
         makedirs(record_path)
+
+    logger.info(f"New record {record_path}")
     
     frames = []        
     for _ in range(0,Duree):
@@ -65,6 +72,8 @@ def Capture() -> None:
     d = datetime.now().strftime('%Y-%m-%d-%H-%M-%S')
     capture_path = path.join(ABS_DIRECTORY, "gallery/captures/")
 
+    logger.info(f"New capture {capture_path}")
+
     if not path.exists(capture_path):
         makedirs(capture_path)
 
@@ -78,8 +87,8 @@ def StartRecord(FPS) -> None:
 
     if record_status is False:
         record_status = True
-        x = Thread(target=_Record, args=(FPS,))
-        x.start()
+        record = Thread(target=_Record, args=(FPS,))
+        record.start()
 
 def StopRecord() -> None:
     global record_status
@@ -98,7 +107,7 @@ def _Record(FPS) -> None:
     if not path.exists(record_path):
         makedirs(record_path)
 
-    print('[*] Capture des images')
+    logger.info(f'Record {record_path}')
 
     frames = []
 
@@ -113,7 +122,7 @@ def _Record(FPS) -> None:
             if end_time > 0 : sleep(end_time)
     cap.release()
 
-    print('[*] Ecriture de la video')
+    logger.info('Ecriture de la video')
 
     height, width, layers = frame.shape
     out = cv2.VideoWriter(path.join(record_path, d + '.avi'), 
@@ -122,7 +131,7 @@ def _Record(FPS) -> None:
 
     for f in range(len(frames)):
         out.write(frames[f])
-        print(f"write : {f}", end='\r')
+        logger.status(f"write : {f}")
     out.release()
 
 if __name__ == '__main__':

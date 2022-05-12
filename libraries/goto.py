@@ -5,13 +5,17 @@ from libraries.logger import setup_logger
 from astropy.coordinates import SkyCoord
 import astropy.units as u
 
-from asyncio import gather, run
+from asyncio import gather, sleep
 import math
 
 logger = setup_logger(__file__)
 
 MOTEUR_AD  = motor(MOTEUR_AD_PIN_DIR, MOTEUR_AD_PIN_STEP, "AD")
 MOTEUR_DEC = motor(MOTEUR_DEC_PIN_DIR, MOTEUR_DEC_PIN_STEP, "DEC")
+
+C_ROTATION_ARCSEC   =   (360/23.9345) / 3600 # compensation rotation de la terre en arc/s
+C_ROTATION_STEPSEC  =   C_ROTATION_ARCSEC / RESOLUTION_ARCSEC_AD
+C_ROTATION_STATUS   =   False
 
 HOME = SkyCoord('8h50m59.75s', '+11d39m22.15s') # Etoile polaire coord ?
 current_position = HOME
@@ -28,23 +32,16 @@ def get_position() -> dict:
         "Dec":current_position.dec.to_string(),
     }
 
-async def goto(destination) -> tuple:
+def goto(destination):
     
     AD, DEC = current_position.spherical_offsets_to(destination)
 
-    logger.debug(f"Goto : AD = {AD}arc\", DEC = {DEC}arc\"")
+    logger.info(f"Goto : AD = {AD}arc\", DEC = {DEC}arc\"")
      
     steps_AD  = AD.to(u.arcsec) / RESOLUTION_ARCSEC_AD
     steps_Dec = DEC.to(u.arcsec) / RESOLUTION_ARCSEC_DEC
 
-    logger.debug(f"Steps : AD = {steps_AD}, DEC = {steps_Dec}")
-
-    # TODO : if nb step > tour complet du telescope -> throw error
-
-    coroutines = [
-        MOTEUR_AD.do_steps(2400*16), 
-        MOTEUR_DEC.do_steps(-2400*16),
-    ]
-    
-    res = await gather(*coroutines, return_exceptions=True)
-    return res
+    logger.debug(f"Steps to do : AD = {steps_AD}, DEC = {steps_Dec}")
+   
+    MOTEUR_AD.add_steps(2400*16)
+    MOTEUR_DEC.add_steps(-2400*16)

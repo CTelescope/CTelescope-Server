@@ -1,7 +1,6 @@
 """
     Interfaces pour le controle les moteurs du telescope
 """
-from asyncio import run
 from flask import jsonify, request
 from flask_cors import cross_origin
 from astropy.coordinates import SkyCoord
@@ -26,6 +25,7 @@ def init_routes_tls(app):
     @app.route("/api/position",methods=['POST'])
     def SetPositionAPI():
         return jsonify({})
+          
     #--------------------------------------------------------
     # Permet de deplacer le telescope vers une position donnée
     # {'AD':'(-+)_h_m_s', 'Dec':'(-+)_h_m_s'}
@@ -34,18 +34,19 @@ def init_routes_tls(app):
     def api_doSteps():
         if request.is_json:
             payload = request.get_json()
-            logger.debug(f"{payload['AD']}, {payload['Dec']}")
+            #logger.debug(f"{payload['AD']}, {payload['Dec']}")
             
             COORD = SkyCoord(ra='8h50m59.75s', dec='+11d39m22.15s')
 
-            res = run(goto(COORD))
+            res = goto(COORD)
             
-            if res[0] == None and res[1]==None:
-                logger.success("All steps are done !")
-                return {'status':'done'}, 200
-            else :
-                logger.failures(f"Some things wrong ! : {res}")
-                return {'status':'failed'}, 500
+            return {}, 200
+            # if res[0] == None and res[1] == None:
+            #     logger.success("All steps are done !")
+            #     return {'status':'done'}, 200
+            # else :
+            #     logger.failures(f"Something went wrong! ! : {res}")
+            #     return {'status':'failed'}, 500
         else:
             return {"result": "Request must be JSON"}, 415
 
