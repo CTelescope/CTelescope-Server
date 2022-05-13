@@ -12,18 +12,18 @@ done
 if ! [ $OnLine ]; then echo "\e[1;31mNot Online" > /dev/stderr; exit; fi
 # Update
 printf "\e[35mUPDATE & INSTALL PACKAGES\e[0m\n"
-#sudo apt-get update -y
-#sudo apt-get upgrade -y
-#sudo apt install hostapd -y
-#sudo apt install dnsmasq -y
+sudo apt-get update -y
+sudo apt-get upgrade -y
+sudo apt install hostapd -y
+sudo apt install dnsmasq -y
 
 printf "\e[35mINSTALL MJPEG STREAMER\e[0m\n"
-#sudo dpkg -i mjpg-streamer_2.0_armhf.deb
+sudo dpkg -i mjpg-streamer_2.0_armhf.deb
 
 printf "\e[35mPython packages\e[0m\n"
-#sudo apt-get install libatlas-base-dev
-#pip install flask  flask_cors  opencv-python  astropy[recommended]
-#pip install -U numpy
+sudo apt-get install libatlas-base-dev
+pip install flask  flask_cors  opencv-python  astropy[recommended]
+pip install -U numpy
 
 printf "\e[35mSETUPING ACCESS POINT\e[0m\n"
 #                       #   255.255.255.248 -> NETMASK
