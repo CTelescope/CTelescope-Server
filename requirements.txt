@@ -1,7 +1,6 @@
 flask
 flask_cors
-#sudo apt-get install libatlas-base-dev
 opencv-python
-#pip install -U numpy
 numpy
 astropy[recommended]
+sphinx

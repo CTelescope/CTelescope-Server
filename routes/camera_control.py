@@ -14,7 +14,7 @@ def init_routes_cmr(app):
         if request.is_json:
             payload = request.get_json()
             Rafale(Duree=payload["duree"], FPS = payload["fps"])
-            return {'result':f'success'}, 200
+            return {}, 200
         return {"error": "Request must be JSON"}, 415
     
     
@@ -26,7 +26,7 @@ def init_routes_cmr(app):
         if request.is_json:
             payload = request.get_json()
             Enregistrement(Duree=payload["duree_record"], FPS = payload["fps_record"])
-            return {'result':f'success'}, 200
+            return {}, 200
         return {"error": "Request must be JSON"}, 415
     
     #--------------------------------------------------------
@@ -37,14 +37,14 @@ def init_routes_cmr(app):
         if request.is_json:
             payload = request.get_json()
             StartRecord(FPS = payload["FPS"])
-            return {'result':f'success'}, 200
+            return {}, 200
         return {"error": "Request must be JSON"}, 415
     
     @app.route("/api/enregistrement_stop",methods=['GET'])
     @cross_origin(supports_credentials=True)
     def api_stop_record():
         StopRecord()
-        return {'result':f'success'}, 200
+        return {}, 200
     
     #--------------------------------------------------------
     # Permet de prendre des capturesde d'image
@@ -53,5 +53,5 @@ def init_routes_cmr(app):
     def api_capture():
         if request.is_json:
             Capture()
-            return {'result':f'success'}, 200
+            return {}, 200
         return {"error": "Request must be JSON"}, 415

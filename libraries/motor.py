@@ -1,26 +1,14 @@
 import RPi.GPIO as gpio
-from RPi.GPIO import HIGH, LOW, OUT, BCM
-from time import sleep
+from RPi.GPIO import HIGH, LOW, OUT
 from threading import Thread
-
+from time import sleep
 from libraries.logger import setup_logger, DEBUG
 
 logger = setup_logger(__file__, DEBUG)
 
-# Setup Gpio Mode 
-gpio.setmode(BCM)
-gpio.setwarnings(False)
-
-# Constantes GPIO
-MOTEUR_DEC_PIN_DIR  = 20
-MOTEUR_DEC_PIN_STEP = 21
-
-MOTEUR_AD_PIN_DIR  = 23
-MOTEUR_AD_PIN_STEP = 24
-
 # Constantes Stepper Motor, Motor Driver, EQ3-2
-MOTOR_SPR               =   400         # 
-MICRO_STEP_MODE         =   64          # TMC2209
+MOTOR_SPR               =   400          # Step  per revolution
+MICRO_STEP_MODE         =   64           # TMC2209
 MIN_STEP_TIME_LEVEL     =   100 * 10**-8 # Voir le data sheet du sheep TMC2209 page 60
 STEP_TIME               =   2 * MIN_STEP_TIME_LEVEL
 DEC_EQ3_2_GEAR_REDUC    =   65
@@ -29,7 +17,6 @@ AXE_DEC_GEAR_REDUC      =   77/14
 AXE_AD_GEAR_REDUC       =   44/16
 RESOLUTION_ARCSEC_DEC   =   ((((360 / MOTOR_SPR) / MICRO_STEP_MODE) / AXE_DEC_GEAR_REDUC ) / DEC_EQ3_2_GEAR_REDUC ) * 3600
 RESOLUTION_ARCSEC_AD    =   ((((360 / MOTOR_SPR) / MICRO_STEP_MODE) / AXE_AD_GEAR_REDUC ) / AD_EQ3_2_GEAR_REDUC ) * 3600
-
 
 SLEEP_SPEED = {
     0.5 : (128 * (STEP_TIME)) - STEP_TIME,  # 0.000254s
@@ -55,23 +42,7 @@ class motor():
         gpio.setup(direction_pin, OUT)
         gpio.setup(stepper_pin, OUT)
 
-        self.motor_loop = Thread(target=self._steps_loop)
-        self.motor_enable = True
-        self.motor_loop.start()
-        
-    # Destructor
-    def __del__(self):
-        self._stop_stepper_loop()
-
-    def _start_stepper_loop(self) :
-        if not self.motor_enable:
-            self.motor_enable = True
-            self.motor_loop.start()
-
-    def _stop_stepper_loop(self) -> None:
-        if self.motor_enable:
-            self.motor_enable = False
-            self.motor_loop.join()
+        Thread(target=self._steps_loop, daemon=True).start()
 
     def _make_a_step(self, step_pin: int):
         gpio.output(step_pin,HIGH)
@@ -84,7 +55,7 @@ class motor():
             tmp_steps_buffer = self.steps_buffer
             if tmp_steps_buffer != 0:
 
-                logger.status(f"MOTOR {self.name} : NB STEPS={tmp_steps_buffer}")
+                logger.status(f"MOTOR {self.name} + {tmp_steps_buffer} step(s)")
                 
                 # Définition du sens de rotation
                 if tmp_steps_buffer < 0: gpio.output(self.direction_pin,LOW) # Sens horaire
@@ -97,20 +68,22 @@ class motor():
 
                 self.steps_buffer -= tmp_steps_buffer
 
-                logger.status(f"MOTOR {self.name} : Done")
-
+                logger.status(f"MOTOR {self.name} step(s) done")
             else:
-                sleep(0.15)
-                logger.debug("Waiting steps")
+                sleep(0.01)
 
-    def set_speed(self, mode):
+    # Permet de définir la vitesse 
+    def set_speed(self, mode: any):
         if mode in SLEEP_SPEED:
-            logger.success(f"Speed mode {mode} sets")
+            logger.success(f"{self.name} : speed mode set to {mode}")
             self.temporize = SLEEP_SPEED[mode]
-            return 0
+        elif mode == 0:
+            logger.warning(f"{self.name} : no change needed, speed mode {mode}")
         else:
-            logger.failures(f"Speed mode {mode} does not exist")
-            return 1
+            logger.failures(f"{self.name} : Speed mode {mode} does not exist")
+
+    def get_speed(self):
+        return list(SLEEP_SPEED.keys())[list(SLEEP_SPEED.values()).index(self.temporize)]
 
     # Permet de rajouter des pas au "steps buffer" 
     def add_steps(self, nb_steps: int ):

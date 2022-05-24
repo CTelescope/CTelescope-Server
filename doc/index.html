@@ -1,0 +1,227 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Documentation &#8212; CTelescope 1.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Bibliothèques" href="libraries.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="documentation">
+<h1>Documentation<a class="headerlink" href="#documentation" title="Permalink to this headline">¶</a></h1>
+<section id="installation">
+<h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<section id="conditions">
+<h3>Conditions<a class="headerlink" href="#conditions" title="Permalink to this headline">¶</a></h3>
+<p>Ce projet nécessite un nano-ordinateur de chez Raspberry, une caméra USB, 2 interfaces moteur TMC2209 et deux interfaces WIFI. Il est fortement recommandé d’utiliser une RPI 3 ou 4 pour garantir des performances convenables car la gestion des moteurs et de la vidéo en threading son gourmand en ressources CPU.</p>
+<p>Une version récente du système d’exploitation Raspbian est recommandée avec python3. Et enfin assurez-vous que le matériel utilisé est fonctionnel.</p>
+<section id="environnements">
+<h4>Environnements<a class="headerlink" href="#environnements" title="Permalink to this headline">¶</a></h4>
+<section id="circuit">
+<h5><strong>Circuit</strong><a class="headerlink" href="#circuit" title="Permalink to this headline">¶</a></h5>
+<p>Les branchements par défaut du raspberry correspondent au schéma ci-dessous :</p>
+<figure class="align-center">
+<img alt="schema_raspberry" src="_images/schema_circuit_ctelescope.PNG" />
+</figure>
+<div class="highlight-python notranslate"><div class="highlight"><pre><span></span><span class="c1"># Driver Step/Dir PIN</span>
+<span class="n">AD_DRIVER_PIN_DIR</span>    <span class="o">=</span> <span class="mi">20</span>
+<span class="n">AD_DRIVER_PIN_STEP</span>   <span class="o">=</span> <span class="mi">21</span>
+<span class="n">DEC_DRIVER_PIN_DIR</span>   <span class="o">=</span> <span class="mi">23</span>
+<span class="n">DEC_DRIVER_PIN_STEP</span>  <span class="o">=</span> <span class="mi">24</span>
+<span class="c1"># Driver Step mode PIN</span>
+<span class="n">AD_DRIVER_PIN_1</span>   <span class="o">=</span> <span class="mi">25</span>
+<span class="n">AD_DRIVER_PIN_2</span>   <span class="o">=</span> <span class="mi">8</span>
+<span class="n">DEC_DRIVER_PIN_1</span>  <span class="o">=</span> <span class="mi">6</span>
+<span class="n">DEC_DRIVER_PIN_2</span>  <span class="o">=</span> <span class="mi">13</span>
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Les PIN choisis peuvent être change dans le fichier <em>libraries/goto.py</em></p>
+</div>
+</section>
+<section id="devellopement">
+<h5><strong>Dévellopement</strong><a class="headerlink" href="#devellopement" title="Permalink to this headline">¶</a></h5>
+<p>Procédure d’installation de l’environnement de développement :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ <span class="nb">cd</span> <span class="nv">$home</span>
+$ git clone https://github.com/CTelescope/CTelescope-Server.git
+$ <span class="nb">cd</span> CTelescope-Server
+$ pip install -r requirements.txt
+$ sudo dpkg -i mjpg-streamer_2.0_armhf.deb
+</pre></div>
+</div>
+<p>Commande pour lancer le flux MJPEG :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ mjpg_streamer -i <span class="s2">&quot;input_uvc.so -r 640x480 -d /dev/video0 -f 24 -q 80&quot;</span> -o <span class="s2">&quot;output_http.so -p 8080&quot;</span>
+</pre></div>
+</div>
+<p>Commande pour démarrer le serveur :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ python3 main.py
+</pre></div>
+</div>
+</section>
+<section id="production">
+<h5><strong>Production</strong><a class="headerlink" href="#production" title="Permalink to this headline">¶</a></h5>
+<p>Pour la mise en production du CTelescope-Server sur la Raspberry Pi vous devrez procéder effectuer les étapes ci-dessous :</p>
+<div class="admonition attention">
+<p class="admonition-title">Attention</p>
+<p>Après cette opération le raspberry sera accessible uniquement en WIFI avec l’adresse IPv4 défini dans le script !</p>
+</div>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ <span class="nb">cd</span> <span class="nv">$home</span>
+$ git clone https://github.com/CTelescope/CTelescope-Server.git
+$ <span class="nb">cd</span> CTelescope-Server/install
+<span class="c1"># Options du scripts</span>
+$ nano install.sh
+      <span class="nv">WLAN</span><span class="o">=</span><span class="s2">&quot;0&quot;</span>
+      <span class="nv">WLAN_IP</span><span class="o">=</span><span class="s2">&quot;10.0.0.249&quot;</span>
+      <span class="nv">WLAN_GW</span><span class="o">=</span><span class="s2">&quot;10.0.0.254&quot;</span>
+      <span class="nv">WLAN_NM</span><span class="o">=</span><span class="s2">&quot;255.255.255.248&quot;</span>
+
+      <span class="nv">SSID</span><span class="o">=</span><span class="s2">&quot;CTelescope&quot;</span>
+      <span class="nv">PWD</span><span class="o">=</span><span class="s2">&quot;telescope_bts_snir&quot;</span>
+      <span class="nv">NB_CLIENT</span><span class="o">=</span><span class="m">1</span>
+
+$ sudo chmod +x ./install.sh
+$ sudo ./install.sh
+$ sudo reboot
+</pre></div>
+</div>
+<div class="admonition note">
+<p class="admonition-title">Note</p>
+<p>Le raspberry lancera automatiquement a son démarrage le point d’accès WIFI, le CTelescope-Server ainsi que le flux MJPEG.</p>
+</div>
+</section>
+</section>
+</section>
+<section id="documentation-du-code">
+<h3>Documentation du code<a class="headerlink" href="#documentation-du-code" title="Permalink to this headline">¶</a></h3>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="libraries.html">Bibliothèques</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="libraries.html#module-libraries.motor">Motor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="libraries.html#module-libraries.goto">Goto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="libraries.html#module-libraries.camera">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="libraries.html#module-libraries.BDD">BDD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="libraries.html#module-libraries.logger">Logger</a></li>
+</ul>
+</li>
+</ul>
+</div>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="routes.html">API</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="routes.html#module-routes.telescope_control">Control du telescope</a></li>
+<li class="toctree-l2"><a class="reference internal" href="routes.html#module-routes.camera_control">Interaction avec la caméra</a></li>
+<li class="toctree-l2"><a class="reference internal" href="routes.html#module-routes.query_data_base">Interaction avec Base de donnée</a></li>
+<li class="toctree-l2"><a class="reference internal" href="routes.html#gallery">Gallery</a></li>
+</ul>
+</li>
+</ul>
+</div>
+</section>
+<section id="index">
+<h3>Index<a class="headerlink" href="#index" title="Permalink to this headline">¶</a></h3>
+<ul class="simple">
+<li><p><a class="reference internal" href="genindex.html"><span class="std std-ref">Index</span></a></p></li>
+<li><p><a class="reference internal" href="py-modindex.html"><span class="std std-ref">Module Index</span></a></p></li>
+<li><p><a class="reference internal" href="search.html"><span class="std std-ref">Search Page</span></a></p></li>
+</ul>
+</section>
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="#">CTelescope</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="libraries.html">Bibliothèques</a></li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="routes.html">API</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="#">Documentation overview</a><ul>
+      <li>Next: <a href="libraries.html" title="next chapter">Bibliothèques</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.5.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/index.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>
