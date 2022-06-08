@@ -29,7 +29,7 @@ _FORMATS = {
             WARNING     : f'[{_BOLD+_YELLOW}!{_RESET}] {_FMT}', 
             ERROR       : f'[{_RED}ERROR{_RESET}] {_FMT}', 
             CRITICAL    : f'[{_RED}CRITICAL{_RESET}] {_FMT}', 
-        }
+}
 
 class NiceFormatter(Formatter):
     def format(self, record):

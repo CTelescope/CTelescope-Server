@@ -1,43 +1,28 @@
-from libraries.motor import RESOLUTION_ARCSEC_AD, RESOLUTION_ARCSEC_DEC
-from libraries.motor import motor
 from libraries.logger import setup_logger, DEBUG
+from libraries.config import RESOLUTION_ARCSEC_AD, RESOLUTION_ARCSEC_DEC
+from libraries.config import AD_DRIVER_PIN_DIR, AD_DRIVER_PIN_STEP, DEC_DRIVER_PIN_DIR, DEC_DRIVER_PIN_STEP
+from libraries.motor import motor
 
 from astropy.coordinates import SkyCoord
 import astropy.units as u
 
 from threading import Thread
 from time import sleep
-import RPi.GPIO as gpio
-from RPi.GPIO import BCM
 import math
 
 logger = setup_logger(__file__, DEBUG)
 
-# Setup Gpio Mode 
-gpio.setmode(BCM)
-gpio.setwarnings(False)
-# Driver Step/Dir PIN
-AD_DRIVER_PIN_DIR    = 20
-AD_DRIVER_PIN_STEP   = 21
-DEC_DRIVER_PIN_DIR   = 23
-DEC_DRIVER_PIN_STEP  = 24
-# Driver Step mode PIN
-AD_DRIVER_PIN_1   = 25
-AD_DRIVER_PIN_2   = 8
-DEC_DRIVER_PIN_1  = 6
-DEC_DRIVER_PIN_2  = 13
-
+# Compensation rotation de la terre en arc/s
+COMP_ROT_ARCSEC       =   (360/23.9345) / 3600 # 0.004178069314169922
+# On a besoin de 0,016712.. arcsec pour compenser la rotation de la terre.
+# Notre résolution de pas est de (ex 0,14160).. arcsec
+# On a donc besoin d'attendre RESOLUTION_ARCSEC_AD / COMP_ROT_ARCSEC
+#   avant de faire un pas.
+TEMPO_COMP_ROT_P_STP  =   RESOLUTION_ARCSEC_AD / COMP_ROT_ARCSEC
+COMP_ROT_STATUS       =   False
 # Instantiation des moteurs
 MOTEUR_AD  = motor(AD_DRIVER_PIN_DIR, AD_DRIVER_PIN_STEP, "AD")
 MOTEUR_DEC = motor(DEC_DRIVER_PIN_DIR, DEC_DRIVER_PIN_STEP, "DEC")
-# Compensation rotation de la terre en arc/s
-COMP_ROT_ARCSEC       =   (360/23.9345) / 3600 
-# On a besoin de 0,016712.. arcsec pour compenser la rotation de la terre.
-# Notre résolution de pas est de 0,14160.. arcsec
-# On a donc besion d'attendre RESOLUTION_ARCSEC_AD / COMP_ROT_ARCSEC
-#     avant de faire un pas.
-TEMPO_COMP_ROT_P_STP  =   RESOLUTION_ARCSEC_AD / COMP_ROT_ARCSEC
-COMP_ROT_STATUS       =   False
 
 current_position = SkyCoord("2h31m0s", "+89°15\'0\"") # coord étoile polaire 
 
