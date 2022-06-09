@@ -1,0 +1,360 @@
+
+<!DOCTYPE html>
+
+<html>
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+    <title>Bibliothèques &#8212; CTelescope 1.0 documentation</title>
+    <link rel="stylesheet" type="text/css" href="_static/pygments.css" />
+    <link rel="stylesheet" type="text/css" href="_static/alabaster.css" />
+    <script data-url_root="./" id="documentation_options" src="_static/documentation_options.js"></script>
+    <script src="_static/jquery.js"></script>
+    <script src="_static/underscore.js"></script>
+    <script src="_static/doctools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="API" href="routes.html" />
+    <link rel="prev" title="Documentation" href="index.html" />
+   
+  <link rel="stylesheet" href="_static/custom.css" type="text/css" />
+  
+  
+  <meta name="viewport" content="width=device-width, initial-scale=0.9, maximum-scale=0.9" />
+
+  </head><body>
+  
+
+    <div class="document">
+      <div class="documentwrapper">
+        <div class="bodywrapper">
+          
+
+          <div class="body" role="main">
+            
+  <section id="bibliotheques">
+<h1>Bibliothèques<a class="headerlink" href="#bibliotheques" title="Permalink to this headline">¶</a></h1>
+<section id="module-libraries.motor">
+<span id="motor"></span><h2>Motor<a class="headerlink" href="#module-libraries.motor" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="libraries.motor.motor">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">libraries.motor.</span></span><span class="sig-name descname"><span class="pre">motor</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">direction_pin</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">stepper_pin</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">name</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">str</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#libraries.motor.motor" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">object</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="libraries.motor.motor._make_a_step">
+<span class="sig-name descname"><span class="pre">_make_a_step</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">step_pin</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#libraries.motor.motor._make_a_step" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="libraries.motor.motor._steps_loop">
+<span class="sig-name descname"><span class="pre">_steps_loop</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#libraries.motor.motor._steps_loop" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="libraries.motor.motor.add_steps">
+<span class="sig-name descname"><span class="pre">add_steps</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nb_steps</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#libraries.motor.motor.add_steps" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="libraries.motor.motor.get_speed">
+<span class="sig-name descname"><span class="pre">get_speed</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#libraries.motor.motor.get_speed" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="libraries.motor.motor.set_speed">
+<span class="sig-name descname"><span class="pre">set_speed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">mode</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">any</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#libraries.motor.motor.set_speed" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+</section>
+<section id="module-libraries.goto">
+<span id="goto"></span><h2>Goto<a class="headerlink" href="#module-libraries.goto" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="libraries.goto._loop_comp_rot_earth">
+<span class="sig-prename descclassname"><span class="pre">libraries.goto.</span></span><span class="sig-name descname"><span class="pre">_loop_comp_rot_earth</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#libraries.goto._loop_comp_rot_earth" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="libraries.goto.comp_earth_rot">
+<span class="sig-prename descclassname"><span class="pre">libraries.goto.</span></span><span class="sig-name descname"><span class="pre">comp_earth_rot</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">active</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">bool</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#libraries.goto.comp_earth_rot" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="libraries.goto.do_steps">
+<span class="sig-prename descclassname"><span class="pre">libraries.goto.</span></span><span class="sig-name descname"><span class="pre">do_steps</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">AD_steps</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">DEC_steps</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#libraries.goto.do_steps" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="libraries.goto.get_position">
+<span class="sig-prename descclassname"><span class="pre">libraries.goto.</span></span><span class="sig-name descname"><span class="pre">get_position</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#libraries.goto.get_position" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="libraries.goto.get_speed">
+<span class="sig-prename descclassname"><span class="pre">libraries.goto.</span></span><span class="sig-name descname"><span class="pre">get_speed</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#libraries.goto.get_speed" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="libraries.goto.goto">
+<span class="sig-prename descclassname"><span class="pre">libraries.goto.</span></span><span class="sig-name descname"><span class="pre">goto</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">destination</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#libraries.goto.goto" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="libraries.goto.set_current_position">
+<span class="sig-prename descclassname"><span class="pre">libraries.goto.</span></span><span class="sig-name descname"><span class="pre">set_current_position</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#libraries.goto.set_current_position" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="libraries.goto.set_speed">
+<span class="sig-prename descclassname"><span class="pre">libraries.goto.</span></span><span class="sig-name descname"><span class="pre">set_speed</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">speedAD</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">speedDEC</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#libraries.goto.set_speed" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="libraries.goto.set_speed_by_distance">
+<span class="sig-prename descclassname"><span class="pre">libraries.goto.</span></span><span class="sig-name descname"><span class="pre">set_speed_by_distance</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">nb_steps</span></span><span class="p"><span class="pre">:</span></span><span class="w"> </span><span class="n"><span class="pre">int</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#libraries.goto.set_speed_by_distance" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-libraries.camera">
+<span id="camera"></span><h2>Camera<a class="headerlink" href="#module-libraries.camera" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="libraries.camera.Capture">
+<span class="sig-prename descclassname"><span class="pre">libraries.camera.</span></span><span class="sig-name descname"><span class="pre">Capture</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#libraries.camera.Capture" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="libraries.camera.Enregistrement">
+<span class="sig-prename descclassname"><span class="pre">libraries.camera.</span></span><span class="sig-name descname"><span class="pre">Enregistrement</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Duree</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">FPS</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#libraries.camera.Enregistrement" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="libraries.camera.Rafale">
+<span class="sig-prename descclassname"><span class="pre">libraries.camera.</span></span><span class="sig-name descname"><span class="pre">Rafale</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Duree</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">FPS</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#libraries.camera.Rafale" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="libraries.camera.StartRecord">
+<span class="sig-prename descclassname"><span class="pre">libraries.camera.</span></span><span class="sig-name descname"><span class="pre">StartRecord</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">FPS</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#libraries.camera.StartRecord" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="libraries.camera.StopRecord">
+<span class="sig-prename descclassname"><span class="pre">libraries.camera.</span></span><span class="sig-name descname"><span class="pre">StopRecord</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#libraries.camera.StopRecord" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="libraries.camera._Record">
+<span class="sig-prename descclassname"><span class="pre">libraries.camera.</span></span><span class="sig-name descname"><span class="pre">_Record</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">FPS</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#libraries.camera._Record" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-libraries.BDD">
+<span id="bdd"></span><h2>BDD<a class="headerlink" href="#module-libraries.BDD" title="Permalink to this headline">¶</a></h2>
+<dl class="py function">
+<dt class="sig sig-object py" id="libraries.BDD.connect_to_db">
+<span class="sig-prename descclassname"><span class="pre">libraries.BDD.</span></span><span class="sig-name descname"><span class="pre">connect_to_db</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#libraries.BDD.connect_to_db" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="libraries.BDD.delete_Cata">
+<span class="sig-prename descclassname"><span class="pre">libraries.BDD.</span></span><span class="sig-name descname"><span class="pre">delete_Cata</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Id_cata</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#libraries.BDD.delete_Cata" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="libraries.BDD.delete_object">
+<span class="sig-prename descclassname"><span class="pre">libraries.BDD.</span></span><span class="sig-name descname"><span class="pre">delete_object</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Id_obj</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#libraries.BDD.delete_object" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="libraries.BDD.get_cata_by_id">
+<span class="sig-prename descclassname"><span class="pre">libraries.BDD.</span></span><span class="sig-name descname"><span class="pre">get_cata_by_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Id_cata</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#libraries.BDD.get_cata_by_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="libraries.BDD.get_catalogues">
+<span class="sig-prename descclassname"><span class="pre">libraries.BDD.</span></span><span class="sig-name descname"><span class="pre">get_catalogues</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#libraries.BDD.get_catalogues" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="libraries.BDD.get_const_by_id">
+<span class="sig-prename descclassname"><span class="pre">libraries.BDD.</span></span><span class="sig-name descname"><span class="pre">get_const_by_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Id_const</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#libraries.BDD.get_const_by_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="libraries.BDD.get_constellations">
+<span class="sig-prename descclassname"><span class="pre">libraries.BDD.</span></span><span class="sig-name descname"><span class="pre">get_constellations</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#libraries.BDD.get_constellations" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="libraries.BDD.get_object_by_cata">
+<span class="sig-prename descclassname"><span class="pre">libraries.BDD.</span></span><span class="sig-name descname"><span class="pre">get_object_by_cata</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Id_cata</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#libraries.BDD.get_object_by_cata" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="libraries.BDD.get_object_by_id">
+<span class="sig-prename descclassname"><span class="pre">libraries.BDD.</span></span><span class="sig-name descname"><span class="pre">get_object_by_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Id_obj</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#libraries.BDD.get_object_by_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="libraries.BDD.get_objects">
+<span class="sig-prename descclassname"><span class="pre">libraries.BDD.</span></span><span class="sig-name descname"><span class="pre">get_objects</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#libraries.BDD.get_objects" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="libraries.BDD.get_type_by_id">
+<span class="sig-prename descclassname"><span class="pre">libraries.BDD.</span></span><span class="sig-name descname"><span class="pre">get_type_by_id</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">Id_type</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#libraries.BDD.get_type_by_id" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="libraries.BDD.get_types">
+<span class="sig-prename descclassname"><span class="pre">libraries.BDD.</span></span><span class="sig-name descname"><span class="pre">get_types</span></span><span class="sig-paren">(</span><span class="sig-paren">)</span><a class="headerlink" href="#libraries.BDD.get_types" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="libraries.BDD.insert_cata">
+<span class="sig-prename descclassname"><span class="pre">libraries.BDD.</span></span><span class="sig-name descname"><span class="pre">insert_cata</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">catalogue</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#libraries.BDD.insert_cata" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="libraries.BDD.insert_object">
+<span class="sig-prename descclassname"><span class="pre">libraries.BDD.</span></span><span class="sig-name descname"><span class="pre">insert_object</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">objet</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#libraries.BDD.insert_object" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="libraries.BDD.update_object">
+<span class="sig-prename descclassname"><span class="pre">libraries.BDD.</span></span><span class="sig-name descname"><span class="pre">update_object</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">objet</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#libraries.BDD.update_object" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+<section id="module-libraries.logger">
+<span id="logger"></span><h2>Logger<a class="headerlink" href="#module-libraries.logger" title="Permalink to this headline">¶</a></h2>
+<dl class="py class">
+<dt class="sig sig-object py" id="libraries.logger.NiceFormatter">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">libraries.logger.</span></span><span class="sig-name descname"><span class="pre">NiceFormatter</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">fmt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">datefmt</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">None</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">style</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">'%'</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">validate</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">True</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#libraries.logger.NiceFormatter" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">logging.Formatter</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="libraries.logger.NiceFormatter.format">
+<span class="sig-name descname"><span class="pre">format</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">record</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#libraries.logger.NiceFormatter.format" title="Permalink to this definition">¶</a></dt>
+<dd><p>Format the specified record as text.</p>
+<p>The record’s attribute dictionary is used as the operand to a
+string formatting operation which yields the returned string.
+Before formatting the dictionary, a couple of preparatory steps
+are carried out. The message attribute of the record is computed
+using LogRecord.getMessage(). If the formatting string uses the
+time (as determined by a call to usesTime(), formatTime() is
+called to format the event time. If there is exception information,
+it is formatted using formatException() and appended to the message.</p>
+</dd></dl>
+
+</dd></dl>
+
+<dl class="py class">
+<dt class="sig sig-object py" id="libraries.logger.NiceLogger">
+<em class="property"><span class="pre">class</span><span class="w"> </span></em><span class="sig-prename descclassname"><span class="pre">libraries.logger.</span></span><span class="sig-name descname"><span class="pre">NiceLogger</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">level</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">20</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#libraries.logger.NiceLogger" title="Permalink to this definition">¶</a></dt>
+<dd><p>Bases: <code class="xref py py-class docutils literal notranslate"><span class="pre">logging.Logger</span></code></p>
+<dl class="py method">
+<dt class="sig sig-object py" id="libraries.logger.NiceLogger.failures">
+<span class="sig-name descname"><span class="pre">failures</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#libraries.logger.NiceLogger.failures" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="libraries.logger.NiceLogger.status">
+<span class="sig-name descname"><span class="pre">status</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#libraries.logger.NiceLogger.status" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+<dl class="py method">
+<dt class="sig sig-object py" id="libraries.logger.NiceLogger.success">
+<span class="sig-name descname"><span class="pre">success</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">msg</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">*</span></span><span class="n"><span class="pre">args</span></span></em>, <em class="sig-param"><span class="o"><span class="pre">**</span></span><span class="n"><span class="pre">kwargs</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#libraries.logger.NiceLogger.success" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</dd></dl>
+
+<dl class="py function">
+<dt class="sig sig-object py" id="libraries.logger.setup_logger">
+<span class="sig-prename descclassname"><span class="pre">libraries.logger.</span></span><span class="sig-name descname"><span class="pre">setup_logger</span></span><span class="sig-paren">(</span><em class="sig-param"><span class="n"><span class="pre">name</span></span></em>, <em class="sig-param"><span class="n"><span class="pre">loglevel</span></span><span class="o"><span class="pre">=</span></span><span class="default_value"><span class="pre">10</span></span></em><span class="sig-paren">)</span><a class="headerlink" href="#libraries.logger.setup_logger" title="Permalink to this definition">¶</a></dt>
+<dd></dd></dl>
+
+</section>
+</section>
+
+
+          </div>
+          
+        </div>
+      </div>
+      <div class="sphinxsidebar" role="navigation" aria-label="main navigation">
+        <div class="sphinxsidebarwrapper">
+<h1 class="logo"><a href="index.html">CTelescope</a></h1>
+
+
+
+
+
+
+
+
+<h3>Navigation</h3>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Bibliothèques</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#module-libraries.motor">Motor</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-libraries.goto">Goto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-libraries.camera">Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-libraries.BDD">BDD</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#module-libraries.logger">Logger</a></li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="routes.html">API</a></li>
+</ul>
+
+<div class="relations">
+<h3>Related Topics</h3>
+<ul>
+  <li><a href="index.html">Documentation overview</a><ul>
+      <li>Previous: <a href="index.html" title="previous chapter">Documentation</a></li>
+      <li>Next: <a href="routes.html" title="next chapter">API</a></li>
+  </ul></li>
+</ul>
+</div>
+<div id="searchbox" style="display: none" role="search">
+  <h3 id="searchlabel">Quick search</h3>
+    <div class="searchformwrapper">
+    <form class="search" action="search.html" method="get">
+      <input type="text" name="q" aria-labelledby="searchlabel" autocomplete="off" autocorrect="off" autocapitalize="off" spellcheck="false"/>
+      <input type="submit" value="Go" />
+    </form>
+    </div>
+</div>
+<script>$('#searchbox').show(0);</script>
+
+
+
+
+
+
+
+
+        </div>
+      </div>
+      <div class="clearer"></div>
+    </div>
+    <div class="footer">
+      &copy;.
+      
+      |
+      Powered by <a href="http://sphinx-doc.org/">Sphinx 4.5.0</a>
+      &amp; <a href="https://github.com/bitprophet/alabaster">Alabaster 0.7.12</a>
+      
+      |
+      <a href="_sources/libraries.rst.txt"
+          rel="nofollow">Page source</a>
+    </div>
+
+    
+
+    
+  </body>
+</html>

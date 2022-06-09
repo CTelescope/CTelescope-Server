@@ -16,13 +16,17 @@ sudo apt-get update -y
 sudo apt-get upgrade -y
 sudo apt install hostapd -y
 sudo apt install dnsmasq -y
+sudo apt install pip -y
+sudo apt install libavcodec-dev -y
+sudo apt install libgtk2.0-dev -y
+sudo apt install libgtk-3- -ydev
 
 printf "\e[35mINSTALL MJPEG STREAMER\e[0m\n"
 sudo dpkg -i mjpg-streamer_2.0_armhf.deb
 
 printf "\e[35mPython packages\e[0m\n"
 sudo apt-get install libatlas-base-dev
-pip install flask  flask_cors  opencv-python  astropy[recommended]
+pip install sphinx flask  flask_cors  opencv-python  astropy[recommended]
 pip install -U numpy
 
 printf "\e[35mSETUPING ACCESS POINT\e[0m\n"
@@ -42,15 +46,15 @@ WLAN_IP="10.0.0.249"
 WLAN_GW="10.0.0.254"
 WLAN_NM="255.255.255.248"
 
-ETH0_STATIQUE_IP="192.168.1.30"
-ETH0_STATIQUE_GW="192.168.1.254"
-ETH0_NM="255.255.255.0"
-ETH0_NW_IP="192.168.1.0"
-ETH0_BC="192.168.1.255"
-
+SSID="CTelescope"
 PWD="telescope_bts_snir"
 NB_CLIENT=1
-SSID="CTelescope"
+
+ETH0_STATIQUE_IP="192.168.1.30"  #  
+ETH0_STATIQUE_GW="192.168.1.254" # 
+ETH0_NM="255.255.255.0"          #  Ne pas changer
+ETH0_NW_IP="192.168.1.0"         #  
+ETH0_BC="192.168.1.255"          #
 
 printf "$INFO Stopping services\n"
 sudo systemctl stop dnsmasq
@@ -119,8 +123,7 @@ else
     sudo cp /etc/dnsmasq.conf /etc/dnsma sq.conf.backup
 fi
 #
-#    ! NEED TO MODIFY MANUALLY !
-#             DHCP POOL
+#    ! IF THIS FILE PREVIOSLY MODIFY YOU NEED TO CHANGE THE DHCP RANGE !
 #
 sudo echo "
 #RPiHotspot

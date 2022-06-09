@@ -8,10 +8,8 @@ from flask_cors import CORS
 
 from routes import init_routes
 from libraries.logger import setup_logger, DEBUG
-from libraries.goto import MOTEUR_AD, MOTEUR_DEC
 
 logger = setup_logger(__file__, DEBUG) 
-
 
 """ FLASK SETUP """
 app = Flask(__name__)

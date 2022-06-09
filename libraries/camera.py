@@ -4,7 +4,6 @@ from os import path, makedirs
 from threading import Thread
 
 import cv2
-from numpy import record
 
 from libraries.logger import setup_logger
 
@@ -15,7 +14,7 @@ URI = "http://0.0.0.0:8080/?action=stream"
 
 record_status = False
 
-def Rafale(Duree, FPS) -> None:
+def Rafale(Duree, FPS):
     cap = cv2.VideoCapture(URI)
     d = datetime.now().strftime('%Y-%m-%d-%H-%M-%S')
     frame_path = path.join(ABS_DIRECTORY, "gallery/rafales/" + d)
@@ -35,7 +34,7 @@ def Rafale(Duree, FPS) -> None:
 
     cap.release()
 
-def Enregistrement(Duree, FPS) -> None:
+def Enregistrement(Duree, FPS):
     cap = cv2.VideoCapture(URI)
 
     d = datetime.now().strftime('%Y-%m-%d-%H-%M-%S')
@@ -66,7 +65,7 @@ def Enregistrement(Duree, FPS) -> None:
         out.write(frames[f])
     out.release()
 
-def Capture() -> None:
+def Capture():
     cap = cv2.VideoCapture(URI)
 
     d = datetime.now().strftime('%Y-%m-%d-%H-%M-%S')
@@ -82,7 +81,7 @@ def Capture() -> None:
 
     cap.release()
 
-def StartRecord(FPS) -> None:
+def StartRecord(FPS):
     global record_status
 
     if record_status is False:
@@ -90,13 +89,13 @@ def StartRecord(FPS) -> None:
         record = Thread(target=_Record, args=(FPS,))
         record.start()
 
-def StopRecord() -> None:
+def StopRecord():
     global record_status
 
     if record_status is True:
         record_status = False
 
-def _Record(FPS) -> None:
+def _Record(FPS):
     global record_status
 
     cap = cv2.VideoCapture(URI)

@@ -12,7 +12,7 @@ def insert_object(objet):
         cur = conn.cursor()
         cur.execute("INSERT INTO Objet (Nom_obj, Ascension_droite, Declinaison, Magnitude, Id_type, Id_const) VALUES (?, ?, ?, ?, ?, ?)", 
                     (objet['Nom_obj'], objet['Ascension_droite'], objet['Declinaison'],
-                    objet['Magnitude'], objet['Id_type'], objet['Id_const'])  )
+                     objet['Magnitude'], objet['Id_type'], objet['Id_const'])  )
         conn.commit()
         inserted_object = get_object_by_id(cur.lastrowid)
     except:
