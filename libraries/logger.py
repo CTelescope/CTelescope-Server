@@ -21,15 +21,15 @@ FAIL_INFO = 13
 # Log Formats 
 _FMT = "{message}"
 _FORMATS = {
-            DEBUG       : f'[{_BOLD+_GRAY}DEBUG{_RESET}] {_FMT}', 
-            STAT_INFO   : f'[{_MAGENTA}x{_RESET}] {_FMT}',
-            SUCC_INFO   : f'[{_BOLD+_GREEN}+{_RESET}] {_FMT}', 
-            FAIL_INFO   : f'[{_BOLD+_RED}-{_RESET}] {_FMT}', 
-            INFO        : f'[{_BOLD+_BLUE}*{_RESET}] {_FMT}', 
-            WARNING     : f'[{_BOLD+_YELLOW}!{_RESET}] {_FMT}', 
-            ERROR       : f'[{_RED}ERROR{_RESET}] {_FMT}', 
-            CRITICAL    : f'[{_RED}CRITICAL{_RESET}] {_FMT}', 
-        }
+    STAT_INFO   : f'[{_MAGENTA}x{_RESET}] {_FMT}',
+    DEBUG       : f'[{_BOLD+_GRAY}DEBUG{_RESET}] {_FMT}', 
+    SUCC_INFO   : f'[{_BOLD+_GREEN}+{_RESET}] {_FMT}', 
+    FAIL_INFO   : f'[{_BOLD+_RED}-{_RESET}] {_FMT}', 
+    INFO        : f'[{_BOLD+_BLUE}*{_RESET}] {_FMT}', 
+    WARNING     : f'[{_BOLD+_YELLOW}!{_RESET}] {_FMT}', 
+    ERROR       : f'[{_RED}ERROR{_RESET}] {_FMT}', 
+    CRITICAL    : f'[{_RED}CRITICAL{_RESET}] {_FMT}', 
+}
 
 class NiceFormatter(Formatter):
     def format(self, record):

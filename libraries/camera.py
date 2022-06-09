@@ -9,77 +9,107 @@ from libraries.logger import setup_logger
 
 logger = setup_logger(__file__)
 
-ABS_DIRECTORY = path.dirname(path.realpath(__file__))
-URI = "http://0.0.0.0:8080/?action=stream"
-
+ABS_DIRECTORY = path.dirname(path.realpath(__file__) ) + "/../"
+# URI = "http://0.0.0.0:8080/?action=stream"
+URI = "http://150.214.222.102/mjpg/video.mjpg?camera=1"
+print(ABS_DIRECTORY)
 record_status = False
 
 def Rafale(Duree, FPS):
-    cap = cv2.VideoCapture(URI)
-    d = datetime.now().strftime('%Y-%m-%d-%H-%M-%S')
-    frame_path = path.join(ABS_DIRECTORY, "gallery/rafales/" + d)
-    
-    if not path.exists(frame_path):
-        makedirs(frame_path)
+    global record_status
 
-    for s in range(0,Duree):
-        for c in range(0,FPS):
-            timer = perf_counter()
-            
-            frame = cap.read()[1]
-            cv2.imwrite(path.join(frame_path, f"{s}-{c}.png"), frame)
+    if record_status is False:
+        record_status = True
 
-            end_time = (1/FPS) - (perf_counter() - timer)
-            if end_time > 0 : sleep(end_time)
+        cap = cv2.VideoCapture(URI)
+        d = datetime.now().strftime('%Y-%m-%d-%H-%M-%S')
+        frame_path = path.join(ABS_DIRECTORY, "gallery/rafales/" + d)
 
-    cap.release()
+        if not path.exists(frame_path):
+            makedirs(frame_path)
+
+        logger.info(f"Start burst : duree {Duree}, FPS {FPS}, Path{frame_path}")
+
+        for s in range(0,Duree):
+            for c in range(0,FPS):
+                timer = perf_counter()
+
+                frame = cap.read()[1]
+                cv2.imwrite(path.join(frame_path, f"{s}-{c}.png"), frame)
+
+                end_time = (1/FPS) - (perf_counter() - timer)
+                if end_time > 0 : sleep(end_time)
+        
+        logger.success(f"Burst done : {frame_path}")
+
+        cap.release()
+        
+        record_status = False
 
 def Enregistrement(Duree, FPS):
-    cap = cv2.VideoCapture(URI)
+    global record_status
 
-    d = datetime.now().strftime('%Y-%m-%d-%H-%M-%S')
-    record_path = path.join(ABS_DIRECTORY, "gallery/enregistrements/")
-
-    if not path.exists(record_path):
-        makedirs(record_path)
-
-    logger.info(f"New record {record_path}")
+    if record_status is False:
+        record_status = True
     
-    frames = []        
-    for _ in range(0,Duree):
-        for _ in range(0,FPS):
-            timer = perf_counter()
-            
-            frame = cap.read()[1]
-            frames.append(frame)
+        cap = cv2.VideoCapture(URI)
 
-            end_time = (1/FPS) - (perf_counter() - timer)
-            if end_time > 0 : sleep(end_time)
-    cap.release()
+        d = datetime.now().strftime('%Y-%m-%d-%H-%M-%S')
+        record_path = path.join(ABS_DIRECTORY, "gallery/enregistrements/")
 
-    height, width, layers = frame.shape
-    out = cv2.VideoWriter(path.join(record_path, d + '.avi'), 
-                          cv2.VideoWriter_fourcc(*'DIVX'), 
-                          FPS, (width,height))
-    for f in range(len(frames)):
-        out.write(frames[f])
-    out.release()
+        if not path.exists(record_path):
+            makedirs(record_path)
+
+        logger.info(f"Debut rec : duree {Duree}, FPS {FPS}, Path{record_path}")
+        
+        frames = []        
+        for _ in range(0,Duree):
+            for _ in range(0,FPS):
+                timer = perf_counter()
+
+                frame = cap.read()[1]
+                frames.append(frame)
+
+                end_time = (1/FPS) - (perf_counter() - timer)
+                if end_time > 0 : sleep(end_time)
+        cap.release()
+
+        record_status = False
+
+        height, width, layers = frame.shape
+        out = cv2.VideoWriter(path.join(record_path, d + '.avi'), 
+                              cv2.VideoWriter_fourcc(*'DIVX'), 
+                              FPS, (width,height))
+        for f in range(len(frames)):
+            out.write(frames[f])
+            logger.status(f"write : {f}")
+
+        logger.success(f"Rec done : {frame_path}")
+
+        out.release()
 
 def Capture():
-    cap = cv2.VideoCapture(URI)
+    global record_status
 
-    d = datetime.now().strftime('%Y-%m-%d-%H-%M-%S')
-    capture_path = path.join(ABS_DIRECTORY, "gallery/captures/")
+    if record_status is False:
+        record_status = True
 
-    logger.info(f"New capture {capture_path}")
+        cap = cv2.VideoCapture(URI)
 
-    if not path.exists(capture_path):
-        makedirs(capture_path)
+        d = datetime.now().strftime('%Y-%m-%d-%H-%M-%S')
+        capture_path = path.join(ABS_DIRECTORY, "gallery/captures/")
 
-    frame = cap.read()[1]
-    cv2.imwrite(path.join(capture_path,d + '.png'), frame)
+        logger.info(f"New capture {capture_path}")
 
-    cap.release()
+        if not path.exists(capture_path):
+            makedirs(capture_path)
+
+        frame = cap.read()[1]
+        cv2.imwrite(path.join(capture_path,d + '.png'), frame)
+
+        cap.release()
+
+        record_status = False
 
 def StartRecord(FPS):
     global record_status
@@ -119,6 +149,7 @@ def _Record(FPS):
 
             end_time = (1/FPS) - (perf_counter() - timer)
             if end_time > 0 : sleep(end_time)
+    
     cap.release()
 
     logger.info('Ecriture de la video')
