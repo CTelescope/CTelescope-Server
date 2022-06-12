@@ -2,18 +2,38 @@ from datetime import datetime
 from time import sleep, perf_counter
 from os import path, makedirs
 from threading import Thread
+from http import server
+import sys
 
 import cv2
 
+# from .ZWOIPCam.streaming import StreamingOutput, StreamingServer, StreamingHandler
+# from .ZWOIPCam.ZWOCamera import ZWOCamera 
 from libraries.logger import setup_logger
 
 logger = setup_logger(__file__)
 
 ABS_DIRECTORY = path.dirname(path.realpath(__file__) ) + "/../"
-# URI = "http://0.0.0.0:8080/?action=stream"
-URI = "http://150.214.222.102/mjpg/video.mjpg?camera=1"
-print(ABS_DIRECTORY)
+URI = "http://0.0.0.0:8000/stream.mjpg"
+
 record_status = False
+
+def start_mjpg_server():
+    stream_output = StreamingOutput()
+    latest_output = StreamingOutput()
+    # Uncomment to use the proper camera
+    # from RPiCamera import RPiCamera
+    # thread = RPiCamera(stream_output, latest_output, logger, 0)
+    thread = ZWOCamera(stream_output, latest_output, logger, 0)
+    try:
+        address = ('', 8000)
+        server = StreamingServer(address, StreamingHandler, stream_output, latest_output)
+        thread.server = server
+        logger.info('Starting serving...')
+        server.serve_forever()
+    finally:
+        thread.terminate = True
+        network_checker.terminate = True
 
 def Rafale(Duree, FPS):
     global record_status

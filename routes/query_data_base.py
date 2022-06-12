@@ -20,8 +20,8 @@ def init_routes_db(app):
     #-------------------------------------------------------
     # Permet de récuperer les objets d'un catalogue par son Id
     @app.route('/api/objet_cata/<Id_cata>', methods = ['GET'])
-    def api_get_objects_cata(Id_cata):
-        return jsonify(get_object_by_cata(Id_cata))
+    def api_get_objects_Asso(Id_cata):
+        return jsonify(get_object_by_Asso(Id_cata))
 
     #--------------------------------------------------------
     # Permet d'ajouter un objet
@@ -90,3 +90,24 @@ def init_routes_db(app):
     @app.route('/api/catalogues', methods = ['GET'])
     def api_get_catas():
         return jsonify(get_catalogues())
+
+
+    #-------------------------------------------------------- 
+    # Permet de récuperer les info de la table d'association
+    @app.route('/api/Assos', methods = ['GET'])
+    def api_get_assos():
+        return jsonify(get_asso())
+
+    #-------------------------------------------------------- 
+    # Permet d'ajouter une association
+    @app.route('/api/asso/add', methods = ['POST'])
+    def api_add_asso():
+        asso = request.get_json()
+        return jsonify(insert_asso(asso))
+
+    #-------------------------------------------------------- 
+    # Permet de supprimer une association  
+    @app.route('/api/asso/delete/', methods = ['DELETE'])
+    def api_delete_asso(asso):
+        return jsonify(delete_asso(asso))
+

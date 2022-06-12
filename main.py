@@ -2,12 +2,14 @@
 # -*- coding: utf-8 -*-
 from RPi.GPIO import cleanup
 from sys import exit
+from threading import Thread
 
 from flask import Flask, request
 from flask_cors import CORS
 
 from routes import init_routes
 from libraries.logger import setup_logger, DEBUG
+# from libraries.camera import start_mjpg_server
 
 logger = setup_logger(__file__, DEBUG) 
 
@@ -32,19 +34,21 @@ def api_connection():
         return {"result": "Request must be JSON"}, 415 
 
 def main():
-	if __name__ == '__main__':
-		try:
-			app.run(host='0.0.0.0', port=5000, debug=False)
-			
-		except Exception as e:
-			logger.error(e)
-			return 1
+	# mjpg_server = Thread(target=start_mjpg_server, daemon=True).start()
+	try:
+		app.run(host='0.0.0.0', port=5000, debug=False)
+		
+	except Exception as e:
+		logger.error(e)
+		return 1
 
-		finally:
-			logger.info("Clean up GPIOs")
-			cleanup()
-			logger.info("End of program")
-			return 0
+	finally:
+		logger.info("Clean up GPIOs")
+		cleanup()
+		logger.info("End of program")
+		return 0
+
+	mjpg_server.join()
 
 if __name__ == '__main__':
 	exit(main())

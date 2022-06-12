@@ -72,13 +72,13 @@ def get_object_by_id(Id_obj):
     
     return objet
 
-def get_object_by_cata(Id_cata):
+def get_object_by_Asso(Id_cata):
     objets = []
     try:
         conn = connect_to_db()
         conn.row_factory = sqlite3.Row
         cur = conn.cursor()
-        cur.execute("SELECT * FROM Objet Natural Join Type Natural Join Constellation Natural Join Catalogue  WHERE Id_cata = ? ",(Id_cata,))
+        cur.execute("SELECT * FROM Objet Natural Join Type Natural Join Constellation Natural Join Catalogue Natural Join Asso_Cata_Obj  WHERE Id_cata = ? ",(Id_cata,))
         rows = cur.fetchall()
 
         # Convert
@@ -93,7 +93,6 @@ def get_object_by_cata(Id_cata):
             objet["Id_const"] = i["Id_const"]
             objet["Nom_type"] = i["Nom_type"]
             objet["Nom_const"] = i["Nom_const"]
-            objet["Nom_cata"] = i["Nom_cata"]
             objets.append(objet)
     except:
         objets = []
@@ -237,11 +236,11 @@ def insert_cata(catalogue):
     try:
         conn = connect_to_db()
         cur = conn.cursor()
-        cur.execute("INSERT INTO Catalogue (Nom_cata) VALUES (?)", 
-                    (catalogue['Id_cata']))
+        cur.execute("INSERT INTO Catalogue (Nom_cata) VALUES (?)", (catalogue['Nom_cata'],))
         conn.commit()
         inserted_cata = get_cata_by_id(cur.lastrowid)
-    except:
+    except Exception as e:
+        raise e
         conn().rollback()
 
     finally:
@@ -302,3 +301,77 @@ def delete_Cata(Id_cata):
         conn.close()
 
     return message
+
+
+#table Asso
+
+def insert_asso(asso):
+    inserted_asso = {}
+    try:
+        conn = connect_to_db()
+        cur = conn.cursor()
+        cur.execute("INSERT INTO Asso_Cata_Obj (Id_cata,Id_obj) VALUES (?,?)", 
+                    (asso['Id_cata'],asso['Id_obj']))
+        conn.commit()
+        inserted_asso = get_asso_by_id(cur.lastrowid)
+    except:
+        conn().rollback()
+
+    finally:
+        conn.close()
+
+    return inserted_asso
+
+def get_asso_by_id(Id_cata):
+    asso = {}
+    try:
+        conn = connect_to_db()
+        conn.row_factory = sqlite3.Row
+        cur = conn.cursor()
+        cur.execute("SELECT * FROM Asso_Cata_Obj WHERE Id_cata = ?",(Id_cata,))
+        row = cur.fetchone()
+
+        # Convert
+        asso["Id_cata"] = row["Id_cata"]
+        asso["Id_obj"] = row["Id_obj"]
+    except:
+        asso = {}
+    
+    return asso
+
+def delete_asso(asso):
+    message = {}
+    asso = {}
+    try:
+        conn = connect_to_db()
+        conn.execute("DELETE FROM Asso_Cata_Obj WHERE Id_cata = ? and Id_obj = ?",
+                    (asso['Id_cata'],asso['Id_obj']))
+        conn.commit()
+        message["status"] = "Association supprimer avec succès"
+    except:
+        conn.rollback()
+        message["status"] = "Impossible de supprimer l'association"
+    finally:
+        conn.close()
+
+    return message
+
+def get_asso():
+    assos = []
+    try:
+        conn = connect_to_db()
+        conn.row_factory = sqlite3.Row
+        cur = conn.cursor()
+        cur.execute("SELECT * FROM Asso_Cata_Obj")
+        rows = cur.fetchall()
+
+        # Convert
+        for i in rows:
+            asso = {}
+            asso["Id_cata"] = i["Id_cata"]
+            asso["Id_obj"] = i["Id_obj"]
+            assos.append(asso)
+
+    except:
+        assos= []
+    return assos

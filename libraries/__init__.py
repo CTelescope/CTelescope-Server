@@ -1,6 +1,6 @@
-from libraries.control import _loop_comp_rot_earth
+from libraries.control import _motors_steps_loop
 from threading import Thread
 
 # On lance le thread contenant la boucle infini pour la compenser 
 #  la rotation de la terre (si COMP_ROT_STATUS est a True)
-Thread(target=_loop_comp_rot_earth, daemon=True).start()
+Thread(target=_motors_steps_loop, daemon=True).start()
